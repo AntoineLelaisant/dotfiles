@@ -1,0 +1,5 @@
+#!/usr/bin/sh
+
+git clone https://github.com/lesfurets/git-octopus.git /tmp/git-octopus
+
+(cd /tmp/git-octopus && make install)
