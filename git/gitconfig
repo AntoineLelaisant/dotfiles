@@ -22,14 +22,11 @@
     editor = vim
     fileMode = false
     excludesfile = ~/.gitignore
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [push]
     default = current
 [pull]
     default = current
-[pager]
-    log = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less
-    show = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less
-    diff = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less
 [interactive]
    diffFilter = /usr/share/doc/git/contrib/diff-highlight/diff-highlight
 [commit]
