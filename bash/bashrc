@@ -106,6 +106,10 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
+if [ -f ~/.git/git-completion.bash ]; then
+    . ~/.git/git-completion.bash
+fi
+
 PATH=$PATH:/usr/local/lib/node_modules/bin
 PATH=$PATH:$HOME/.composer/vendor/bin
 

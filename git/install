@@ -4,3 +4,8 @@ pacman -S --noconfirm git
 
 ln -s -f /home/antoine/.dotfiles/git/gitignore /home/antoine/.gitignore
 ln -s -f /home/antoine/.dotfiles/git/gitconfig /home/antoine/.gitconfig
+
+# Git autocompletion
+mkdir -p /home/antoine/.git/
+
+curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash > /home/antoine/.git/git-completion.bash
