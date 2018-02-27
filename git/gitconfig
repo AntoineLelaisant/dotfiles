@@ -1,0 +1,36 @@
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+[color "status"]
+    changed = yellow
+[user]
+    name = Antoine Lelaisant
+    email = antoine.lelaisant@knplabs.com
+	signingkey = B388148D6FCB955D
+[alias]
+	ci = commit
+	co = checkout
+	st = status
+	br = branch
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s%Cgreen(%cr) %C(bold blue)<%an>%Creset'--abbrev-commit --date=relative
+[merge]
+    tool = meld
+[mergetool]
+    keepBackup = false
+[core]
+    editor = vim
+    fileMode = false
+    excludesfile = ~/.gitignore
+[push]
+    default = current
+[pull]
+    default = current
+[pager]
+    log = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less
+    show = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less
+    diff = /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less
+[interactive]
+   diffFilter = /usr/share/doc/git/contrib/diff-highlight/diff-highlight
+[commit]
+	gpgsign = true

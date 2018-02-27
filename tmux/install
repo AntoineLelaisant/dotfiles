@@ -1,0 +1,7 @@
+#!/usr/bin/sh
+
+pacman -S --noconfirm tmux
+
+ln -s -f /home/antoine/.dotfiles/tmux/tmux.conf /home/antoine/.tmux.conf
+
+chown antoine /home/antoine/.tmux.conf

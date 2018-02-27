@@ -1,0 +1,7 @@
+#!/usr/bin/sh
+
+rm -f /home/antoine/.bashrc
+
+ln -s -f /home/antoine/.dotfiles/bash/bashrc /home/antoine/.bashrc
+ln -s -f /home/antoine/.dotfiles/bash/bash_aliases /home/antoine/.bash_aliases
+ln -s -f /home/antoine/.dotfiles/bash/bash_prompt /home/antoine/.bash_prompt

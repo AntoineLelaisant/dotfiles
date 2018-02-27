@@ -1,0 +1,25 @@
+alias sf='php app/console'
+alias sfcc='sf cache:clear'
+alias sfinit='sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX app/cache app/logs ; sudo setfacl -dR -m u:www-data:rwx -m u:`whoami`:rwx app/cache app/logs ; sfcc'
+
+alias tmux='tmux -2'
+alias open-workspace='teamocil --layout ./.teamocil.yml --here'
+
+alias gpurge='purge = branch --merged master | grep -v master | xargs git branch -d'
+
+alias ll="ls -l"
+alias lla="ls -al"
+
+# Docker
+alias dcps="docker-compose ps"
+alias dce='docker-compose exec'
+alias dc='docker-compose'
+alias de="docker exec"
+alias deit="docker exec -it"
+
+# tagsgen
+alias tagsgen="node /usr/local/lib/node_modules/tagsgen/lib/main.js"
+
+# xclip
+alias pbcopy="xclip -sel clip"
+

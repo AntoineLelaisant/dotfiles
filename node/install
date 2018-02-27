@@ -1,0 +1,5 @@
+#!/usr/bin/sh
+
+pacman -S --noconfirm npm nodejs
+
+npm install -g tagsgen

@@ -1,0 +1,8 @@
+#!/usr/bin/sh
+
+mkdir -p /home/antoine/.local/share/fonts
+
+rm -rf /home/antoine/.local/share/fonts/*
+
+cp /home/antoine/.dotfiles/fonts/UbuntuMono/* /home/antoine/.local/share/fonts/
+cp /home/antoine/.dotfiles/fonts/Inconsolata/* /home/antoine/.local/share/fonts/

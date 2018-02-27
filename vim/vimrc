@@ -1,0 +1,147 @@
+set number
+set expandtab " converts tabs to spaces
+set autoindent " automatically copy indentation from previous line
+set smartindent " indents one extra level according to current syntax
+" indents with tab = 4 spaces
+set ignorecase
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set mouse=a
+set ls=2
+set ruler
+set clipboard=unnamedplus
+set colorcolumn=80
+set hidden
+set directory=~/.vim/tmp
+au BufNewFile,BufRead *.twig set ft=htmljinja
+au BufNewFile,BufRead *.tsx set ft=typescript.jsx
+set incsearch
+set hlsearch
+set encoding=utf-8
+set nowrap
+set exrc
+set updatetime=250
+syntax on
+
+let mapleader = ","
+
+" highlight trailing spaces
+set list
+set listchars=eol:ᛎ,trail:‧,tab:▹∙
+match ErrorMsg '\s\+$'
+
+function! StripTrailingWhitespace()
+  normal mZ
+  %s/\s\+$//e
+  normal `Z
+endfunction
+
+autocmd FileType php,js,css,html,xml,yaml,vim autocmd BufWritePre <buffer> :call StripTrailingWhitespace()
+
+" Automatically create directory if it does not exist
+au BufWrite * :call <SID>MkdirsIfNotExists(expand('<afile>:h'))
+function! <SID>MkdirsIfNotExists(directory)
+  if(!isdirectory(a:directory))
+    call system('mkdir -p '.shellescape(a:directory))
+  endif
+endfunction
+
+" CURSOR
+highlight Cursor guifg=white guibg=white
+set cursorline
+
+" Ctags
+set tags=.tags,.vendor.tags,.tsx.tags,.ts.tags
+
+inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
+noremap <Leader>u :call PhpInsertUse()<CR>
+inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
+noremap <Leader>e :call PhpExpandClass()<CR>
+
+" tags jump
+nmap <silent> <F2> "zyiw:exe ":tj ".@z.""<CR>
+
+" vim-airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline_powerline_fonts = 1
+let g:airline_theme='raven'
+
+let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
+let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
+
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let NERDTreeIgnore=['node_modules']
+
+filetype plugin indent on
+
+set wildmenu
+set wildmode=list:longest
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir': '\v([\/]\.(git|hg|svn))|([\/]node_modules)|([\/]compiled)|([\/]dist)|([\/]app/cache)|([\/]bower_components)|([\/]doc)$',
+  \ }
+
+let g:jsx_ext_required = 0
+
+" copy to x buffer
+vmap <leader>y "+y<CR>
+nmap <leader>p "+p<CR>
+
+set t_Co=256
+colorscheme hybrid
+
+autocmd InsertEnter * hi LineNr      ctermfg=16 ctermbg=214 guifg=Orange guibg=#151515
+autocmd InsertLeave * hi LineNr      term=underline ctermfg=59 ctermbg=232 guifg=#605958 guibg=#151515
+
+" clear vim cache
+nnoremap <leader>c :!rm -rf ~/.vim/tmp/*<CR><CR>
+
+nmap <C-b> <leader>lb
+nmap <C-e> <leader>lr
+nmap <C-h> :bp<CR>
+nmap <C-l> :bn<CR>
+nnoremap <C-k> :BD<CR>              " Kill current buffer
+nmap <C-n> :NERDTreeToggle<CR>
+nmap <leader>f :NERDTreeFind<CR>
+nmap <leader>bc :BufOnly<CR>        " Kill buffers but active one
+nnoremap <leader>/ :noh<CR>
+nmap <leader>s <leader>g]
+
+nmap tt g<C-]>
+nmap TT <C-T>
+
+"unmap arrows
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+
+" TAGBAR
+nmap <F8> :TagbarToggle<CR>
+
+
+" Speed up ctrl p
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+
+" ULTISNIPS
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" Refresh tags
+nnoremap <F7> :!ctags -h ".php" --PHP-kinds=+cf --regex-php="/^[ \t]*trait[ \t]+([a-z0_9_]+)/\1/t,traits/i" --recurse --exclude="*/cache/*" --exclude="*/logs/*" --exclude="*/data/*" --exclude="\.git" --exclude="\.svn" --languages=PHP<CR>
+
+" Easy tags jump
+noremap <Leader>t "zyiw:exe ":tj ".@z.""<CR>
+
+" vim-php-namespace
+inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
+noremap <Leader>u :call PhpInsertUse()<CR>

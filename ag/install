@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+
+pacman -S --noconfirm the_silver_searcher
