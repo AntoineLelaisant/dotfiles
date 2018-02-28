@@ -1,5 +1,6 @@
 #!/usr/bin/sh
 
-pacman -S --noconfirm npm nodejs
+pacman -S --noconfirm npm
 
-npm install -g tagsgen
+npm install tagsgen -g
+npm install yarn -g

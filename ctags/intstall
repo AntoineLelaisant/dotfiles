@@ -1,0 +1,5 @@
+#!/usr/bin/sh
+
+pacman -S --noconfirm ctags
+
+ln -s -f /home/antoine/.dotfiles/ctags/ctags /home/antoine/.ctags

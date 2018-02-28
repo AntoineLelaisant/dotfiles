@@ -17,8 +17,7 @@ alias dc='docker-compose'
 alias de="docker exec"
 alias deit="docker exec -it"
 
-# tagsgen
-alias tagsgen="node /usr/local/lib/node_modules/tagsgen/lib/main.js"
+alias tagsgen="node /usr/lib/node_modules/tagsgen/lib/main.js"
 
 # xclip
 alias pbcopy="xclip -sel clip"

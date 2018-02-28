@@ -9,3 +9,4 @@ install:
 	sh ./docker/install
 	sh ./workspace/install
 	sh ./ag/install
+	sh ./ctags/install
