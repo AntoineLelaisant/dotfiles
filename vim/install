@@ -1,5 +1,8 @@
 #!/usr/bin/sh
 
+pacman -R --noconfirm vim
+pacman -S --noconfirm gvim
+
 sh ./vim/install-plugins
 
 mkdir -p /home/antoine/.vim/
