@@ -1,5 +1,7 @@
 install:
 	sh ./bash/install
+	sh ./php/install
+	sh ./composer/install
 	sh ./fonts/install
 	sh ./git/install
 	sh ./git-octopus/install

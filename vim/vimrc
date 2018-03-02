@@ -10,7 +10,7 @@ set shiftwidth=4
 set mouse=a
 set ls=2
 set ruler
-set clipboard=unnamed
+set clipboard=unnamedplus
 set colorcolumn=80
 set hidden
 set directory=~/.vim/tmp

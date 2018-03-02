@@ -7,12 +7,12 @@
 [user]
     name = Antoine Lelaisant
     email = antoine.lelaisant@knplabs.com
-	signingkey = 544A094F11884DE9
+    signingkey = 544A094F11884DE9
 [alias]
-	ci = commit
-	co = checkout
-	st = status
-	br = branch
+    ci = commit
+    co = checkout
+    st = status
+    br = branch
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s%Cgreen(%cr) %C(bold blue)<%an>%Creset'--abbrev-commit --date=relative
 [merge]
     tool = meld
@@ -22,7 +22,7 @@
     editor = vim
     fileMode = false
     excludesfile = ~/.gitignore
-	pager = diff-so-fancy | less --tabs=4 -RFX
+    pager = diff-so-fancy | less --tabs=4 -RFX
 [push]
     default = current
 [pull]
@@ -30,4 +30,4 @@
 [interactive]
    diffFilter = /usr/share/doc/git/contrib/diff-highlight/diff-highlight
 [commit]
-	gpgsign = true
+    gpgsign = true

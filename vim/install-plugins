@@ -25,7 +25,7 @@ git clone https://github.com/vim-airline/vim-airline-themes.git /home/antoine/.v
 git clone https://github.com/austintaylor/vim-commaobject.git /home/antoine/.vim/pack/default/start/CommaObject
 git clone https://github.com/easymotion/vim-easymotion.git /home/antoine/.vim/pack/default/start/Easymotion
 git clone https://github.com/tpope/vim-fugitive.git /home/antoine/.vim/pack/default/start/Fugitive
-git clone https://github.com/airblade/vim-gitgutter.git /home/antoine/.vim/pack/default/start/GitGutter
+# git clone https://github.com/airblade/vim-gitgutter.git /home/antoine/.vim/pack/default/start/GitGutter
 git clone https://github.com/pangloss/vim-javascript.git /home/antoine/.vim/pack/default/start/Javascript
 git clone https://github.com/mxw/vim-jsx.git /home/antoine/.vim/pack/default/start/Jsx
 git clone https://github.com/neoclide/vim-jsx-improve.git /home/antoine/.vim/pack/default/start/JsxImprove
