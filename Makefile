@@ -12,3 +12,4 @@ install:
 	sh ./workspace/install
 	sh ./ag/install
 	sh ./ctags/install
+	sh ./postman/install
