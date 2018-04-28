@@ -111,7 +111,7 @@ if [ -f ~/.git/git-completion.bash ]; then
 fi
 
 PATH=$PATH:/usr/local/lib/node_modules/bin
-PATH=$PATH:$HOME/.composer/vendor/bin
+PATH=$PATH:$HOME/.config/composer/vendor/bin
 
 # Weather
 function weather { 

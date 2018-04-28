@@ -15,7 +15,7 @@ git clone https://github.com/sjbach/lusty.git /home/antoine/.vim/pack/default/st
 git clone https://github.com/scrooloose/nerdtree.git /home/antoine/.vim/pack/default/start/Nerdtree
 git clone https://github.com/arnaud-lb/vim-php-namespace.git /home/antoine/.vim/pack/default/start/PhpNamespace
 git clone https://github.com/Herzult/phpspec-vim.git /home/antoine/.vim/pack/default/start/Phpspec
-git clone https://github.com/vim-syntastic/syntastic.git /home/antoine/.vim/pack/default/start/Syntastic
+# git clone https://github.com/vim-syntastic/syntastic.git /home/antoine/.vim/pack/default/start/Syntastic
 git clone https://github.com/godlygeek/tabular.git /home/antoine/.vim/pack/default/start/Tabular
 git clone https://github.com/majutsushi/tagbar.git /home/antoine/.vim/pack/default/start/Tagbar
 git clone https://github.com/leafgarland/typescript-vim.git /home/antoine/.vim/pack/default/start/Typescript
@@ -25,11 +25,11 @@ git clone https://github.com/vim-airline/vim-airline-themes.git /home/antoine/.v
 git clone https://github.com/austintaylor/vim-commaobject.git /home/antoine/.vim/pack/default/start/CommaObject
 git clone https://github.com/easymotion/vim-easymotion.git /home/antoine/.vim/pack/default/start/Easymotion
 git clone https://github.com/tpope/vim-fugitive.git /home/antoine/.vim/pack/default/start/Fugitive
-# git clone https://github.com/airblade/vim-gitgutter.git /home/antoine/.vim/pack/default/start/GitGutter
 git clone https://github.com/pangloss/vim-javascript.git /home/antoine/.vim/pack/default/start/Javascript
 git clone https://github.com/mxw/vim-jsx.git /home/antoine/.vim/pack/default/start/Jsx
 git clone https://github.com/neoclide/vim-jsx-improve.git /home/antoine/.vim/pack/default/start/JsxImprove
 git clone https://github.com/tpope/vim-surround.git /home/antoine/.vim/pack/default/start/Surround
 git clone https://github.com/beyondwords/vim-twig.git /home/antoine/.vim/pack/default/start/Twig
 git clone https://github.com/stephpy/vim-yaml.git /home/antoine/.vim/pack/default/start/Yaml
+git clone https://github.com/w0rp/ale.git /home/antoine/.vim/pack/default/start/Ale
 
