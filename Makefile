@@ -11,4 +11,7 @@ install:
 	sh ./workspace/install
 	sh ./ag/install
 	sh ./ctags/install
+
+install-extra:
+	sh ./google-chrome/install
 	sh ./postman/install

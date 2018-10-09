@@ -15,3 +15,9 @@ Install:
 ```bash
 sudo make -B install
 ```
+
+For extra packages (like Postman etc.):
+
+```bash
+make -B install-extra
+```

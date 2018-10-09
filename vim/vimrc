@@ -52,7 +52,7 @@ highlight Cursor guifg=white guibg=white
 set cursorline
 
 " Ctags
-set tags=.tags,.vendor.tags,.tsx.tags,.ts.tags
+set tags=.tags,.vendor.tags
 
 inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
 noremap <Leader>u :call PhpInsertUse()<CR>
