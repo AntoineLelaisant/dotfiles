@@ -126,12 +126,10 @@ imap <right> <nop>
 " TAGBAR
 nmap <F8> :TagbarToggle<CR>
 
-
 " Speed up ctrl p
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 
 " ULTISNIPS
-
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
@@ -145,3 +143,12 @@ noremap <Leader>t "zyiw:exe ":tj ".@z.""<CR>
 " vim-php-namespace
 inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
 noremap <Leader>u :call PhpInsertUse()<CR>
+
+" YCM
+let g:ycm_min_num_of_chars_for_completion = 4
+let g:ycm_min_num_identifier_candidate_chars = 4
+let g:ycm_enable_diagnostic_highlighting = 0
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]

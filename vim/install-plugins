@@ -15,7 +15,6 @@ git clone https://github.com/sjbach/lusty.git /home/antoine/.vim/pack/default/st
 git clone https://github.com/scrooloose/nerdtree.git /home/antoine/.vim/pack/default/start/Nerdtree
 git clone https://github.com/arnaud-lb/vim-php-namespace.git /home/antoine/.vim/pack/default/start/PhpNamespace
 git clone https://github.com/Herzult/phpspec-vim.git /home/antoine/.vim/pack/default/start/Phpspec
-# git clone https://github.com/vim-syntastic/syntastic.git /home/antoine/.vim/pack/default/start/Syntastic
 git clone https://github.com/godlygeek/tabular.git /home/antoine/.vim/pack/default/start/Tabular
 git clone https://github.com/majutsushi/tagbar.git /home/antoine/.vim/pack/default/start/Tagbar
 git clone https://github.com/leafgarland/typescript-vim.git /home/antoine/.vim/pack/default/start/Typescript
@@ -32,4 +31,9 @@ git clone https://github.com/tpope/vim-surround.git /home/antoine/.vim/pack/defa
 git clone https://github.com/beyondwords/vim-twig.git /home/antoine/.vim/pack/default/start/Twig
 git clone https://github.com/stephpy/vim-yaml.git /home/antoine/.vim/pack/default/start/Yaml
 git clone https://github.com/w0rp/ale.git /home/antoine/.vim/pack/default/start/Ale
+git clone https://github.com/Valloric/YouCompleteMe.git /home/antoine/.vim/pack/default/start/YouCompleteMe
+
+# Specific to YouCompleteMe
+(cd /home/antoine/.vim/pack/default/start/YouCompleteMe && git submodule update --init --recursive)
+(cd /home/antoine/.vim/pack/default/start/YouCompleteMe && ./install.py --tern-completer)
 

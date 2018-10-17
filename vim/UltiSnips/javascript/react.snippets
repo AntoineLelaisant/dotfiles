@@ -1,0 +1,55 @@
+snippet cl "Javascript module"
+import React from 'react';
+
+const ${1} = ({
+}) =>
+	${2}
+
+export default $1;
+endsnippet
+
+snippet cont "Javascript module"
+import { compose } from 'redux';
+import { connect } from 'react-redux';
+import ${1} from './$1';
+
+const mapStateToProps = state => ({
+	${3}
+});
+
+const mapDispatchToProps = dispatch => ({
+	${4}
+});
+
+const mergeProps = (stateProps, dispatchProps${5:`, ownProps`}) => ({
+	${6}
+});
+
+export default compose(
+	connect(mapStateToProps, mapDispatchToProps, mergeProps)
+)($1);
+endsnippet
+
+snippet mapStateToProps "Javascript module"
+const mapStateToProps = state => ({
+	${1}
+});
+endsnippet
+
+snippet mapDispatchToProps "Javascript module"
+const mapDispatchToProps = dispatch => ({
+	${1}
+});
+endsnippet
+
+snippet mergeProps "Javascript module"
+const mergeProps = (stateProps, dispatchProps${1:`, ownProps`}) => ({
+	${2}
+});
+endsnippet
+
+snippet index "Javascript module"
+import ${1:Container} from './$1';
+
+export default $1;
+endsnippet

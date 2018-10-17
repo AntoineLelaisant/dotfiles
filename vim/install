@@ -9,6 +9,7 @@ mkdir -p /home/antoine/.vim/
 mkdir -p /home/antoine/.vim/tmp/
 
 ln -s -f /home/antoine/.dotfiles/vim/vimrc /home/antoine/.vimrc
+ln -s -f /home/antoine/.dotfiles/vim/tern-config /home/antoine/.tern-config
 ln -s -f /home/antoine/.dotfiles/vim/colors /home/antoine/.vim/colors
 ln -s -f /home/antoine/.dotfiles/vim/ftplugin /home/antoine/.vim/ftplugin
 ln -s -f /home/antoine/.dotfiles/vim/UltiSnips /home/antoine/.vim/UltiSnips
