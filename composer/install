@@ -17,6 +17,6 @@ rm composer-setup.php
 
 mv composer.phar /usr/local/bin/composer
 
-./install_globals
+./composer/install_globals
 
 exit $RESULT

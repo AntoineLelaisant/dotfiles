@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+
+pacman -S --noconfirm ruby

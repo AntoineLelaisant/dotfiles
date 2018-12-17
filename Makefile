@@ -11,7 +11,10 @@ install:
 	sh ./workspace/install
 	sh ./ag/install
 	sh ./ctags/install
+	sh ./diff-highligth/install
 
 install-extra:
 	sh ./google-chrome/install
 	sh ./postman/install
+	sh ./balsamiq/install
+	sh ./spotify/install

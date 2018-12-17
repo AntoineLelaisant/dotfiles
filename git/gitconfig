@@ -7,7 +7,7 @@
 [user]
     name = Antoine Lelaisant
     email = antoine.lelaisant@knplabs.com
-    signingkey = 544A094F11884DE9
+	signingkey = 236B913B79F114F5
 [alias]
     ci = commit
     co = checkout
@@ -30,4 +30,6 @@
 [interactive]
    diffFilter = /usr/share/doc/git/contrib/diff-highlight/diff-highlight
 [commit]
-    gpgsign = true
+	gpgsign = true
+[gpg]
+	program = gpg
