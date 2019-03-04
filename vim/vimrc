@@ -37,7 +37,7 @@ function! StripTrailingWhitespace()
   normal `Z
 endfunction
 
-autocmd FileType php,js,css,html,xml,yaml,vim autocmd BufWritePre <buffer> :call StripTrailingWhitespace()
+autocmd FileType php,js,jsx,ts,tsx,css,html,xml,yaml,vim autocmd BufWritePre <buffer> :call StripTrailingWhitespace()
 
 " Automatically create directory if it does not exist
 au BufWrite * :call <SID>MkdirsIfNotExists(expand('<afile>:h'))
@@ -52,39 +52,15 @@ highlight Cursor guifg=white guibg=white
 set cursorline
 
 " Ctags
-set tags=.tags,.vendor.tags
-
-inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
-noremap <Leader>u :call PhpInsertUse()<CR>
-inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
-noremap <Leader>e :call PhpExpandClass()<CR>
+set tags=tags,.tags,.vendor.tags
 
 " tags jump
 nmap <silent> <F2> "zyiw:exe ":tj ".@z.""<CR>
-
-" vim-airline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_powerline_fonts = 1
-let g:airline_theme='raven'
-
-let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
-let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
-
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
-let NERDTreeIgnore=['node_modules']
 
 filetype plugin indent on
 
 set wildmenu
 set wildmode=list:longest
-
-let g:ctrlp_custom_ignore = {
-  \ 'dir': '\v([\/]\.(git|hg|svn))|([\/]node_modules)|([\/]compiled)|([\/]dist)|([\/]app/cache)|([\/]bower_components)|([\/]doc)$',
-  \ }
-
-let g:jsx_ext_required = 0
 
 " copy to x buffer
 vmap <leader>y "+y<CR>
@@ -126,29 +102,44 @@ imap <right> <nop>
 " TAGBAR
 nmap <F8> :TagbarToggle<CR>
 
-" Speed up ctrl p
-let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+" Easy tags jump
+noremap <Leader>t "zyiw:exe ":tj ".@z.""<CR>
+
+function! IPhpInsertUse()
+    call PhpInsertUse()
+    call feedkeys('a',  'n')
+endfunction
+autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
+autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
+autocmd FileType php inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
+autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
 
 " ULTISNIPS
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
-" Refresh tags
-nnoremap <F7> :!ctags -h ".php" --PHP-kinds=+cf --regex-php="/^[ \t]*trait[ \t]+([a-z0_9_]+)/\1/t,traits/i" --recurse --exclude="*/cache/*" --exclude="*/logs/*" --exclude="*/data/*" --exclude="\.git" --exclude="\.svn" --languages=PHP<CR>
+" Speed up ctrl p
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+let g:ctrlp_custom_ignore = {
+  \ 'dir': '\v([\/]\.(git|hg|svn))|([\/]node_modules)|([\/]compiled)|([\/]dist)|([\/]app/cache)|([\/]bower_components)|([\/]doc)$',
+  \ }
 
-" Easy tags jump
-noremap <Leader>t "zyiw:exe ":tj ".@z.""<CR>
+" vim-airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline_powerline_fonts = 1
+let g:airline_theme='raven'
 
-" vim-php-namespace
-inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
-noremap <Leader>u :call PhpInsertUse()<CR>
+" NERDTree
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
 
-" YCM
-let g:ycm_min_num_of_chars_for_completion = 4
-let g:ycm_min_num_identifier_candidate_chars = 4
-let g:ycm_enable_diagnostic_highlighting = 0
-set completeopt-=preview
-let g:ycm_add_preview_to_completeopt = 0
-let g:ycm_key_list_select_completion=[]
-let g:ycm_key_list_previous_completion=[]
+let g:jsx_ext_required = 0
+
+" ALE
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint'],
+\}
+let g:ale_fix_on_save = 1

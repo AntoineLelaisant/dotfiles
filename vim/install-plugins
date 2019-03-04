@@ -31,9 +31,5 @@ git clone https://github.com/tpope/vim-surround.git /home/antoine/.vim/pack/defa
 git clone https://github.com/beyondwords/vim-twig.git /home/antoine/.vim/pack/default/start/Twig
 git clone https://github.com/stephpy/vim-yaml.git /home/antoine/.vim/pack/default/start/Yaml
 git clone https://github.com/w0rp/ale.git /home/antoine/.vim/pack/default/start/Ale
-git clone https://github.com/Valloric/YouCompleteMe.git /home/antoine/.vim/pack/default/start/YouCompleteMe
-
-# Specific to YouCompleteMe
-(cd /home/antoine/.vim/pack/default/start/YouCompleteMe && git submodule update --init --recursive)
-(cd /home/antoine/.vim/pack/default/start/YouCompleteMe && ./install.py --tern-completer)
-
+git clone https://github.com/jparise/vim-graphql.git /home/antoine/.vim/pack/default/start/VimGraphql
+git clone https://github.com/craigemery/vim-autotag.git /home/antoine/.vim/pack/default/start/VimAutotag

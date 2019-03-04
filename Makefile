@@ -12,6 +12,7 @@ install:
 	sh ./ag/install
 	sh ./ctags/install
 	sh ./diff-highligth/install
+	sh ./lastpass/install
 
 install-extra:
 	sh ./google-chrome/install
