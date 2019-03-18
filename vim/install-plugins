@@ -32,4 +32,11 @@ git clone https://github.com/beyondwords/vim-twig.git /home/antoine/.vim/pack/de
 git clone https://github.com/stephpy/vim-yaml.git /home/antoine/.vim/pack/default/start/Yaml
 git clone https://github.com/w0rp/ale.git /home/antoine/.vim/pack/default/start/Ale
 git clone https://github.com/jparise/vim-graphql.git /home/antoine/.vim/pack/default/start/VimGraphql
-git clone https://github.com/craigemery/vim-autotag.git /home/antoine/.vim/pack/default/start/VimAutotag
+git clone https://github.com/ludovicchabant/vim-gutentags.git /home/antoine/.vim/pack/default/start/Gutentags
+git clone https://github.com/mbbill/undotree.git /home/antoine/.vim/pack/default/start/Undotree
+git clone https://github.com/junegunn/goyo.vim.git /home/antoine/.vim/pack/default/start/Goyo
+git clone https://github.com/phpactor/phpactor.git /home/antoine/.vim/pack/default/start/Phpactor
+
+# Phpactor
+(cd /home/antoine/.vim/pack/default/start/Phpactor && composer install)
+ln -s /home/antoine/.vim/pack/default/start/Phpactor/bin/phpactor /usr/local/bin

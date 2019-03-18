@@ -2,4 +2,4 @@
 
 pacman -S --noconfirm ctags
 
-ln -s -f /home/antoine/.dotfiles/ctags/ctags /home/antoine/.ctags
+ln -s -f /home/antoine/.dotfiles/ctags/ctags.d /home/antoine/.ctags.d

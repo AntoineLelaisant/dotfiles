@@ -1,17 +1,17 @@
 snippet sg
-public function get${1/\w+\s*/\u$0/}()
+public function get${1/\w+\s*/\u$0/}()${2/^\w+/: $0/}
 {
     return $this->$1;
 }
 
-public function set${1/\w+\s*/\u$0/}(${2} $$1)
+public function set${1/\w+\s*/\u$0/}($2 $$1)
 {
     $this->$1 = $$1;
 }
 endsnippet
 
 snippet get
-public function get${1/\w+\s*/\u$0/}()
+public function get${1/\w+\s*/\u$0/}()${2}
 {
     return $this->${1};
 }

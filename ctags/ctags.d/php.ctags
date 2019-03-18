@@ -1,0 +1,6 @@
+--langmap=php:.php
+--regex-php=/abstract class ([^ ]*)/\1/c/
+--regex-php=/interface ([^ ]*)/\1/i/
+--regex-PHP=/const\s+([^ \t=]+)/\1/d/
+--regex-php=/trait ([^ ]*)/\1/c/
+--regex-php=/(public |static |abstract |protected |private )+function ([^ (]*)/\2/f/

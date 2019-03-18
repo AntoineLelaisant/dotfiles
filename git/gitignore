@@ -9,6 +9,7 @@ tags
 .composer
 .npm
 .vimrc
+.phpactor.yml
 
 parameter.ini
 *_local.yml
