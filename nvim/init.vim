@@ -31,12 +31,13 @@ Plug 'jparise/vim-graphql'
 " PHP
 Plug 'arnaud-lb/vim-php-namespace'
 Plug 'rafi/vim-phpspec'
-Plug 'phpactor/phpactor'
+Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'}
 
 " ncm2
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
-Plug 'phpactor/ncm2-phpactor'
+Plug 'phpactor/ncm2-phpactor' " php
+Plug 'ncm2/ncm2-tern' " javascript
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
 Plug 'ncm2/ncm2-ultisnips'
@@ -144,7 +145,6 @@ nmap <C-n> :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
 nmap <leader>bc :BufOnly<CR>        " Kill buffers but active one
 nnoremap <leader>/ :noh<CR>
-nmap <leader>s <leader>g]
 
 nmap tt g<C-]>
 nmap TT <C-T>
@@ -165,19 +165,8 @@ nmap <F8> :TagbarToggle<CR>
 " UNDOTREE
 nmap <Leader>ut :UndotreeToggle<CR>
 
-" Easy tags jump
-noremap <Leader>t "zyiw:exe ":tj ".@z.""<CR>
-
-function! IPhpInsertUse()
-    call PhpInsertUse()
-    call feedkeys('a',  'n')
-endfunction
-autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
-autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
 autocmd FileType php inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
 autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
-autocmd FileType php inoremap <Leader>us <Esc>:call PhpSortUse()<CR>
-autocmd FileType php noremap <Leader>us :call PhpSortUse()<CR>
 
 let g:php_namespace_sort_after_insert = 1
 
@@ -211,11 +200,11 @@ let g:ale_fixers = {
 \}
 let g:ale_fix_on_save = 1
 
-" Goyo
-noremap <Leader>gg :Goyo<CR>
-
 " Phpactor
 noremap <Leader><space> :call phpactor#ContextMenu()<CR>
+noremap <Leader>g :call phpactor#GotoDefinition()<CR>
+noremap <Leader>u :call phpactor#UseAdd()<CR>
+noremap <Leader>t :call phpactor#Transform()<CR>
 
 " Phpspec
 let g:phpspec_executable = 'docker-compose exec php phpspec'

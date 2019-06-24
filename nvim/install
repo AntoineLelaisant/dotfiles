@@ -10,5 +10,6 @@ mkdir -p /home/antoine/.config/nvim/
 
 ln -s -f /home/antoine/.dotfiles/nvim/init.vim /home/antoine/.config/nvim/init.vim
 ln -s -f /home/antoine/.dotfiles/nvim/colors /home/antoine/.config/nvim/colors
+ln -s -f /home/antoine/.dotfiles/nvim/UltiSnips /home/antoine/.config/nvim/UltiSnips
 
 nvim +'PlugInstall --sync' +qa
