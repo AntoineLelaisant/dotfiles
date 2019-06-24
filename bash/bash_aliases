@@ -15,7 +15,7 @@ alias dcps="docker-compose ps"
 alias dce='docker-compose exec'
 alias dc='docker-compose'
 alias dcs="docker stop $(docker ps -aq)"
-alias dcp="docker rm $(docker ps -aq)" 
+alias dcp="docker rm $(docker ps -aq)"
 
 alias tagsgen="node /usr/lib/node_modules/tagsgen/lib/main.js"
 
@@ -23,3 +23,5 @@ alias tagsgen="node /usr/lib/node_modules/tagsgen/lib/main.js"
 alias pbcopy="xclip -sel clip"
 
 alias docker-top='docker run -ti -v /var/run/docker.sock:/var/run/docker.sock quay.io/vektorlab/ctop:latest'
+
+alias rndbg='adb shell input keyevent 82'

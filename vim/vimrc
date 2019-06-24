@@ -156,3 +156,10 @@ let g:ale_fix_on_save = 1
 
 " Goyo
 noremap <Leader>gg :Goyo<CR>
+
+" Phpactor
+noremap <Leader><space> :call phpactor#ContextMenu()<CR>
+
+" Phpspec
+let g:phpspec_executable = 'docker-compose exec php phpspec'
+let g:phpspec_config_dir = 'apps/api'

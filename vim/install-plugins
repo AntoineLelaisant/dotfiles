@@ -14,7 +14,8 @@ git clone https://github.com/editorconfig/editorconfig-vim.git /home/antoine/.vi
 git clone https://github.com/sjbach/lusty.git /home/antoine/.vim/pack/default/start/Lusty
 git clone https://github.com/scrooloose/nerdtree.git /home/antoine/.vim/pack/default/start/Nerdtree
 git clone https://github.com/arnaud-lb/vim-php-namespace.git /home/antoine/.vim/pack/default/start/PhpNamespace
-git clone https://github.com/Herzult/phpspec-vim.git /home/antoine/.vim/pack/default/start/Phpspec
+# git clone https://github.com/Herzult/phpspec-vim.git /home/antoine/.vim/pack/default/start/Phpspec
+git clone https://github.com/rafi/vim-phpspec.git /home/antoine/.vim/pack/default/start/Phpspec
 git clone https://github.com/godlygeek/tabular.git /home/antoine/.vim/pack/default/start/Tabular
 git clone https://github.com/majutsushi/tagbar.git /home/antoine/.vim/pack/default/start/Tagbar
 git clone https://github.com/leafgarland/typescript-vim.git /home/antoine/.vim/pack/default/start/Typescript

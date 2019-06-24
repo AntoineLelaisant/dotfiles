@@ -6,3 +6,4 @@ rm -rf /home/antoine/.local/share/fonts/*
 
 cp /home/antoine/.dotfiles/fonts/UbuntuMono/* /home/antoine/.local/share/fonts/
 cp /home/antoine/.dotfiles/fonts/Inconsolata/* /home/antoine/.local/share/fonts/
+cp /home/antoine/.dotfiles/fonts/DejaVuSansMono/* /home/antoine/.local/share/fonts/

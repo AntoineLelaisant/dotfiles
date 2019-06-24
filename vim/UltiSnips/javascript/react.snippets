@@ -1,14 +1,13 @@
-snippet cl "Javascript module"
-import React from 'react';
+snippet cl "React functionnal component"
+import React from 'react'
 
-const ${1} = ({
-}) =>
+const ${1} = () =>
 	${2}
 
-export default $1;
+export default $1
 endsnippet
 
-snippet cont "Javascript module"
+snippet cont "React redux container"
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import ${1} from './$1';
@@ -30,25 +29,25 @@ export default compose(
 )($1);
 endsnippet
 
-snippet mapStateToProps "Javascript module"
+snippet mapStateToProps "mapStateToProps"
 const mapStateToProps = state => ({
 	${1}
 });
 endsnippet
 
-snippet mapDispatchToProps "Javascript module"
+snippet mapDispatchToProps "mapDispatchToProps"
 const mapDispatchToProps = dispatch => ({
 	${1}
 });
 endsnippet
 
-snippet mergeProps "Javascript module"
+snippet mergeProps "mergeProps"
 const mergeProps = (stateProps, dispatchProps${1:`, ownProps`}) => ({
 	${2}
 });
 endsnippet
 
-snippet index "Javascript module"
+snippet index "export index"
 import ${1:Container} from './$1';
 
 export default $1;
