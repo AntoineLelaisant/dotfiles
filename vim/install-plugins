@@ -37,6 +37,13 @@ git clone https://github.com/ludovicchabant/vim-gutentags.git /home/antoine/.vim
 git clone https://github.com/mbbill/undotree.git /home/antoine/.vim/pack/default/start/Undotree
 git clone https://github.com/junegunn/goyo.vim.git /home/antoine/.vim/pack/default/start/Goyo
 git clone https://github.com/phpactor/phpactor.git /home/antoine/.vim/pack/default/start/Phpactor
+git clone https://github.com/ncm2/ncm2.git /home/antoine/.vim/pack/default/start/ncm2
+git clone https://github.com/roxma/nvim-yarp.git /home/antoine/.vim/pack/default/start/nvim-yarp
+git clone https://github.com/phpactor/ncm2-phpactor.git /home/antoine/.vim/pack/default/start/ncm2-phpactor
+git clone https://github.com/ncm2/ncm2-bufword.git /home/antoine/.vim/pack/default/start/ncm2-bufword
+git clone https://github.com/ncm2/ncm2-path.git /home/antoine/.vim/pack/default/start/ncm2-path
+git clone https://github.com/ncm2/ncm2-ultisnips.git /home/antoine/.vim/pack/default/start/ncm2-ultisnips
+
 
 # Phpactor
 (cd /home/antoine/.vim/pack/default/start/Phpactor && composer install)
