@@ -2,6 +2,10 @@
 
 yay -S --noconfirm neovim vim-ruby vim-plug
 
+# Python support for vim
+pip install neovim
+pip2 install neovim
+
 mkdir -p /home/antoine/.config/nvim/
 
 ln -s -f /home/antoine/.dotfiles/nvim/init.vim /home/antoine/.config/nvim/init.vim
