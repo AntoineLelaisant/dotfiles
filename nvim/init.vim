@@ -1,3 +1,60 @@
+"   ██╗███╗   ██╗██╗████████╗██╗   ██╗██╗███╗   ███╗
+"   ██║████╗  ██║██║╚══██╔══╝██║   ██║██║████╗ ████║
+"   ██║██╔██╗ ██║██║   ██║   ██║   ██║██║██╔████╔██║
+"   ██║██║╚██╗██║██║   ██║   ╚██╗ ██╔╝██║██║╚██╔╝██║
+"   ██║██║ ╚████║██║   ██║██╗ ╚████╔╝ ██║██║ ╚═╝ ██║
+"   ╚═╝╚═╝  ╚═══╝╚═╝   ╚═╝╚═╝  ╚═══╝  ╚═╝╚═╝     ╚═╝
+
+call plug#begin('~/.local/share/nvim/plugged')
+
+" vim-scripts
+Plug 'vim-scripts/BufOnly.vim'
+Plug 'vim-scripts/Rename'
+Plug 'vim-scripts/bufkill.vim'
+
+" Search files
+Plug 'scrooloose/nerdtree'
+
+" vim airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+"
+" Syntax
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'beyondwords/vim-twig'
+Plug 'stephpy/vim-yaml'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'jparise/vim-graphql'
+
+" PHP
+Plug 'arnaud-lb/vim-php-namespace'
+Plug 'rafi/vim-phpspec'
+Plug 'phpactor/phpactor'
+
+" ncm2
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+Plug 'phpactor/ncm2-phpactor'
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-ultisnips'
+
+Plug 'SirVer/ultisnips'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'majutsushi/tagbar'
+Plug 'austintaylor/vim-commaobject'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'w0rp/ale'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'mbbill/undotree'
+Plug 'junegunn/goyo.vim'
+
+call plug#end()
+
 set number
 set expandtab " converts tabs to spaces
 set autoindent " automatically copy indentation from previous line
@@ -163,3 +220,6 @@ noremap <Leader><space> :call phpactor#ContextMenu()<CR>
 " Phpspec
 let g:phpspec_executable = 'docker-compose exec php phpspec'
 let g:phpspec_config_dir = 'apps/api'
+
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect

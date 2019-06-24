@@ -4,7 +4,7 @@ install:
 	sh ./composer/install
 	sh ./fonts/install
 	sh ./git/install
-	sh ./vim/install
+	sh ./nvim/install
 	sh ./tmux/install
 	sh ./node/install
 	sh ./docker/install

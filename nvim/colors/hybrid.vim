@@ -438,4 +438,4 @@ hi! link diffAdded Special
 " NECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 " THE SOFTWARE.
 
-" }}} 
+" }}}
