@@ -1,0 +1,5 @@
+#!/usr/bin/sh
+
+yay -S zsh
+
+ln -s -f /home/antoine/.dotfiles/zsh/zshrc /home/antoine/.zshrc
