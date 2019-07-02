@@ -14,6 +14,7 @@ Plug 'vim-scripts/bufkill.vim'
 
 " Search files
 Plug 'scrooloose/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " vim airline
 Plug 'vim-airline/vim-airline'
@@ -27,6 +28,7 @@ Plug 'stephpy/vim-yaml'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'jparise/vim-graphql'
+Plug 'posva/vim-vue'
 
 " PHP
 Plug 'arnaud-lb/vim-php-namespace'
@@ -117,6 +119,7 @@ nmap <silent> <F2> "zyiw:exe ":tj ".@z.""<CR>
 
 " Gutentags
 let g:gutentags_ctags_extra_args = ['--kinds-PHP=cidf']
+let g:gutentags_exclude_filetypes = ['gitcommit']
 
 filetype plugin indent on
 
