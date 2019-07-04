@@ -1,6 +1,6 @@
 #!/usr/bin/sh
 
-pacman -S --noconfirm npm
+yay -S --noconfirm npm
 
 npm install tagsgen -g
 npm install yarn -g

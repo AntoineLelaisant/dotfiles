@@ -15,6 +15,7 @@ Plug 'vim-scripts/bufkill.vim'
 " Search files
 Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'sjbach/lusty'
 
 " vim airline
 Plug 'vim-airline/vim-airline'

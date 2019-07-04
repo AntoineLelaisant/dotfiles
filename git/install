@@ -1,6 +1,6 @@
 #!/usr/bin/sh
 
-pacman -S --noconfirm git
+yay -S --noconfirm git
 
 ln -s -f /home/antoine/.dotfiles/git/gitignore /home/antoine/.gitignore
 ln -s -f /home/antoine/.dotfiles/git/gitconfig /home/antoine/.gitconfig

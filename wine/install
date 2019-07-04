@@ -1,4 +1,3 @@
 #!/usr/bin/sh
 
-pacman -S --noconfirm wine
-
+yay -S --noconfirm wine
