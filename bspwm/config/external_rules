@@ -1,0 +1,25 @@
+#! /bin/sh
+
+wid=$1
+class=$2
+instance=$3
+title=$(xtitle "$wid")
+state=$(echo "$4" | grep -oP '(?<=\bstate=)(\w+)')
+# ~/test.sh
+if [ "$instance" = kitty ] && [ "$state" = floating ] ; then
+  # it seems to work thank's to the delay of the term opening
+  positionFile="$HOME/.config/bspwm/scripts/draw.tmp"
+  source "$positionFile"
+  rm "$positionFile"
+  tmux new-session -d -s draw_tmp
+  tmux send-keys "xdotool windowmove $1 $X $Y" C-m
+  tmux detach -s draw_tmp
+fi
+
+if [ "$class" = Google-chrome-beta ]
+then
+  if [[ $(xprop -id "$wid" | grep WM_WINDOW_ROLE) = *'= "pop-up"' ]]
+  then
+    echo "state=floating"
+  fi
+fi

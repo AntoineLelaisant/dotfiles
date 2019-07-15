@@ -2,8 +2,8 @@
 
 yay -S --noconfirm git
 
-ln -s -f /home/antoine/.dotfiles/git/gitignore /home/antoine/.gitignore
-ln -s -f /home/antoine/.dotfiles/git/gitconfig /home/antoine/.gitconfig
+cp -rf /home/antoine/.dotfiles/git/gitignore /home/antoine/.gitignore
+cp -rf /home/antoine/.dotfiles/git/gitconfig /home/antoine/.gitconfig
 
 # Git autocompletion
 mkdir -p /home/antoine/.git/

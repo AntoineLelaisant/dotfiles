@@ -1,0 +1,1 @@
+/home/antoine/.config/bspwm/scripts/autostart/work.sh

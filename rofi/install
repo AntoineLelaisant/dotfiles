@@ -1,0 +1,5 @@
+#!/usr/bin/sh
+
+yay -S --noconfirm rofi
+
+cp -rf /home/antoine/.dotfiles/rofi/config /home/antoine/.config/rofi

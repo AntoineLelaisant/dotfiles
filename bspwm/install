@@ -1,0 +1,5 @@
+#!/usr/bin/sh
+
+yay -S --noconfirm bspwm
+
+cp -ur /home/antoine/.dotfiles/bspwm/config /home/antoine/.config/bspwm

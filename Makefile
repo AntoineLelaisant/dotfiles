@@ -1,21 +1,24 @@
 install:
-	sh ./bash/install
+	sh ./zsh/install
+	sh ./bin/install
+	sh ./bspwm/install
+	sh ./sxhkd/install
+	sh ./rofi/install
 	sh ./php/install
+	sh ./ruby/install
+	sh ./node/install
+	sh ./git/install
+	sh ./diff-highligth/install
 	sh ./composer/install
 	sh ./fonts/install
-	sh ./git/install
-	sh ./nvim/install
+	sh ./ctags/install
 	sh ./tmux/install
-	sh ./node/install
+	sh ./nvim/install
 	sh ./docker/install
 	sh ./workspace/install
-	sh ./ag/install
-	sh ./ctags/install
-	sh ./diff-highligth/install
-	sh ./lastpass/install
 
 install-extra:
 	sh ./google-chrome/install
-	sh ./postman/install
-	sh ./balsamiq/install
 	sh ./spotify/install
+	sh ./insomnia/install
+	sh ./lastpass/install

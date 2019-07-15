@@ -1,0 +1,6 @@
+#!/bin/sh
+
+mkdir -p /home/antoine/.bin
+
+ln -s -f /home/antoine/.dotfiles/bin/askpass-rofi /home/antoine/.bin/askpass-rofi
+ln -s -f /home/antoine/.dotfiles/bin/lock /home/antoine/.bin/lock

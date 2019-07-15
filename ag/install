@@ -1,3 +1,0 @@
-#!/usr/bin/sh
-
-yay -S --noconfirm the_silver_searcher

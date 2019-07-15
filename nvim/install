@@ -1,15 +1,10 @@
 #!/usr/bin/sh
 
-yay -S --noconfirm neovim vim-ruby vim-plug
+yay -S --noconfirm neovim vim-plug
 
 # Python support for vim
 pip install neovim
-pip2 install neovim
 
-mkdir -p /home/antoine/.config/nvim/
-
-ln -s -f /home/antoine/.dotfiles/nvim/init.vim /home/antoine/.config/nvim/init.vim
-ln -s -f /home/antoine/.dotfiles/nvim/colors /home/antoine/.config/nvim/colors
-ln -s -f /home/antoine/.dotfiles/nvim/UltiSnips /home/antoine/.config/nvim/UltiSnips
+cp -rf /home/antoine/.dotfiles/nvim/config /home/antoine/.config/nvim
 
 nvim +'PlugInstall --sync' +qa

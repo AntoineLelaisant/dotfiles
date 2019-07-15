@@ -2,4 +2,4 @@
 
 yay -S --noconfirm ctags
 
-ln -s -f /home/antoine/.dotfiles/ctags/ctags.d /home/antoine/.ctags.d
+cp -r /home/antoine/.dotfiles/ctags/ctags.d /home/antoine/.ctags.d
