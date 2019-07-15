@@ -16,6 +16,7 @@ install:
 	sh ./nvim/install
 	sh ./docker/install
 	sh ./workspace/install
+	sh ./kitty/install
 
 install-extra:
 	sh ./google-chrome/install

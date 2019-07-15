@@ -1,0 +1,5 @@
+#!/usr/bin/sh
+
+yay -S --noconfirm kitty
+
+cp -rf /home/antoine/.dotfiles/kitty/config /home/antoine/.config/kitty
