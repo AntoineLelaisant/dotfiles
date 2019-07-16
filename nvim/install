@@ -5,6 +5,7 @@ yay -S --noconfirm neovim vim-plug
 # Python support for vim
 pip install neovim
 
+rm -rf /home/antoine/.config/nvim
 cp -rf /home/antoine/.dotfiles/nvim/config /home/antoine/.config/nvim
 
 nvim +'PlugInstall --sync' +qa

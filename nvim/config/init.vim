@@ -60,9 +60,13 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'mbbill/undotree'
 Plug 'junegunn/goyo.vim'
 
+" Theme
+Plug 'morhetz/gruvbox'
+
 call plug#end()
 
 set number
+set numberwidth=5
 set expandtab " converts tabs to spaces
 set autoindent " automatically copy indentation from previous line
 set smartindent " indents one extra level according to current syntax
@@ -134,8 +138,20 @@ set wildmode=list:longest
 vmap <leader>y "+y<CR>
 nmap <leader>p "+p<CR>
 
+" Theme
 set t_Co=256
-colorscheme hybrid
+colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_contrast_light = 'hard'
+
+if (empty($TMUX))
+  if (has("nvim"))
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
 
 autocmd InsertEnter * hi LineNr      ctermfg=16 ctermbg=214 guifg=Orange guibg=#151515
 autocmd InsertLeave * hi LineNr      term=underline ctermfg=59 ctermbg=232 guifg=#605958 guibg=#151515
