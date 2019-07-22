@@ -14,8 +14,9 @@ Plug 'vim-scripts/bufkill.vim'
 
 " Search files
 Plug 'scrooloose/nerdtree'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'sjbach/lusty'
-"
+
 " Fuzzy search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -63,6 +64,8 @@ Plug 'junegunn/goyo.vim'
 " Theme
 Plug 'morhetz/gruvbox'
 
+Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
 
 set number
@@ -79,7 +82,6 @@ set mouse=a
 set ls=2
 set ruler
 set clipboard=unnamedplus
-set colorcolumn=80
 set hidden
 set directory=~/.vim/tmp
 au BufNewFile,BufRead *.twig set ft=htmljinja
@@ -144,6 +146,8 @@ colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_contrast_light = 'hard'
 
+hi Normal guibg=NONE ctermbg=NONE
+
 if (empty($TMUX))
   if (has("nvim"))
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -152,9 +156,6 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
-
-autocmd InsertEnter * hi LineNr      ctermfg=16 ctermbg=214 guifg=Orange guibg=#151515
-autocmd InsertLeave * hi LineNr      term=underline ctermfg=59 ctermbg=232 guifg=#605958 guibg=#151515
 
 " clear vim cache
 nnoremap <leader>c :!rm -rf ~/.vim/tmp/*<CR><CR>
@@ -206,7 +207,15 @@ let g:airline_theme='raven'
 
 " NERDTree
 let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
+let NERDTreeDirArrowExpandable = "\u00a0"
+let NERDTreeDirArrowCollapsible = "\u00a0"
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+let g:DevIconsEnableFoldersOpenClose = 1
+hi NERDTreeClosable ctermfg=green
+hi NERDTreeOpenable ctermfg=green
+hi NERDTreeDir ctermfg=green
+hi NERDTreeFlags ctermfg=white
+"
 
 let g:jsx_ext_required = 0
 
@@ -260,3 +269,5 @@ command! -bang -nargs=? -complete=dir Files
 
 map <C-f> <esc>:Rg
 noremap <C-p> <esc>:Files<CR>
+
+noremap <C-c> <Esc>

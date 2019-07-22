@@ -2,4 +2,5 @@
 
 yay -S --noconfirm kitty
 
+rm -rf /home/antoine/.config/kitty
 cp -rf /home/antoine/.dotfiles/kitty/config /home/antoine/.config/kitty

@@ -2,4 +2,5 @@
 
 yay -S --noconfirm bspwm
 
+rm -rf /home/antoine/.config/bspwm
 cp -ur /home/antoine/.dotfiles/bspwm/config /home/antoine/.config/bspwm
