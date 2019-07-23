@@ -135,7 +135,7 @@ nmap <silent> <F2> "zyiw:exe ":tj ".@z.""<CR>
 
 " Gutentags
 let g:gutentags_ctags_extra_args = ['--kinds-PHP=cidf']
-let g:gutentags_exclude_filetypes = ['gitcommit']
+let g:gutentags_exclude_filetypes = ['gitcommit', 'yaml', 'json', 'xml']
 
 filetype plugin indent on
 
