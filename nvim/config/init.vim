@@ -20,7 +20,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " Motions
-Plug 'terryma/vim-multiple-cursors'
 Plug 'easymotion/vim-easymotion'
 Plug 'mbbill/undotree'
 Plug 'SirVer/ultisnips'
@@ -175,16 +174,6 @@ nnoremap <leader>/ :noh<CR>
 
 nmap tt g<C-]>
 nmap TT <C-T>
-
-" Multi cursors
-let g:multi_cursor_start_word_key      = '<C-t>'
-let g:multi_cursor_select_all_word_key = '<C-a>'
-let g:multi_cursor_start_key           = 'g<C-n>'
-let g:multi_cursor_select_all_key      = 'g<A-n>'
-let g:multi_cursor_next_key            = '<C-n>'
-let g:multi_cursor_prev_key            = '<C-p>'
-let g:multi_cursor_skip_key            = '<C-x>'
-let g:multi_cursor_quit_key            = '<C-c>'
 
 "unmap arrows
 map <up> <nop>
