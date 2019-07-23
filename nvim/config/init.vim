@@ -12,19 +12,26 @@ Plug 'vim-scripts/BufOnly.vim'
 Plug 'vim-scripts/Rename'
 Plug 'vim-scripts/bufkill.vim'
 
-" Search files
+" Browse
 Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'sjbach/lusty'
-
-" Fuzzy search
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+" Motions
+Plug 'terryma/vim-multiple-cursors'
+Plug 'easymotion/vim-easymotion'
+Plug 'mbbill/undotree'
+Plug 'SirVer/ultisnips'
+Plug 'tpope/vim-surround'
+Plug 'scrooloose/nerdcommenter'
+Plug 'godlygeek/tabular'
 
 " vim airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-"
+
 " Syntax
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
@@ -49,21 +56,20 @@ Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
 Plug 'ncm2/ncm2-ultisnips'
 
-Plug 'SirVer/ultisnips'
+" CS
 Plug 'editorconfig/editorconfig-vim'
-Plug 'majutsushi/tagbar'
-Plug 'austintaylor/vim-commaobject'
-Plug 'easymotion/vim-easymotion'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
+
+" Tags
 Plug 'ludovicchabant/vim-gutentags'
-Plug 'mbbill/undotree'
-Plug 'junegunn/goyo.vim'
+Plug 'majutsushi/tagbar'
 
-" Theme
+" Theme / Prettify
 Plug 'morhetz/gruvbox'
+Plug 'junegunn/goyo.vim'
+Plug 'tpope/vim-fugitive'
 
+" Must remain the last loaded
 Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
@@ -157,9 +163,6 @@ if (empty($TMUX))
   endif
 endif
 
-" clear vim cache
-nnoremap <leader>c :!rm -rf ~/.vim/tmp/*<CR><CR>
-
 nmap <C-b> <leader>lb
 nmap <C-e> <leader>lr
 nmap <C-h> :bp<CR>
@@ -172,6 +175,16 @@ nnoremap <leader>/ :noh<CR>
 
 nmap tt g<C-]>
 nmap TT <C-T>
+
+" Multi cursors
+let g:multi_cursor_start_word_key      = '<C-t>'
+let g:multi_cursor_select_all_word_key = '<C-a>'
+let g:multi_cursor_start_key           = 'g<C-n>'
+let g:multi_cursor_select_all_key      = 'g<A-n>'
+let g:multi_cursor_next_key            = '<C-n>'
+let g:multi_cursor_prev_key            = '<C-p>'
+let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<C-c>'
 
 "unmap arrows
 map <up> <nop>
@@ -206,6 +219,8 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='raven'
 
 " NERDTree
+let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeQuitOnOpen = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrowExpandable = "\u00a0"
 let NERDTreeDirArrowCollapsible = "\u00a0"
@@ -215,7 +230,15 @@ hi NERDTreeClosable ctermfg=green
 hi NERDTreeOpenable ctermfg=green
 hi NERDTreeDir ctermfg=green
 hi NERDTreeFlags ctermfg=white
-"
+
+function! NERDTreeOnStartUp()
+    if 0 == argc()
+        NERDTree
+    end
+endfunction
+
+autocmd VimEnter * call NERDTreeOnStartUp()
+
 
 let g:jsx_ext_required = 0
 
