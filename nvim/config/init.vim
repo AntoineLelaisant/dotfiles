@@ -107,9 +107,9 @@ set listchars=eol:ᛎ,trail:‧,tab:▹∙
 match ErrorMsg '\s\+$'
 
 function! StripTrailingWhitespace()
-  normal mZ
-  %s/\s\+$//e
-  normal `Z
+normal mZ
+%s/\s\+$//e
+normal `Z
 endfunction
 
 autocmd FileType php,js,jsx,ts,tsx,css,html,xml,yaml,vim autocmd BufWritePre <buffer> :call StripTrailingWhitespace()
@@ -117,9 +117,9 @@ autocmd FileType php,js,jsx,ts,tsx,css,html,xml,yaml,vim autocmd BufWritePre <bu
 " Automatically create directory if it does not exist
 au BufWrite * :call <SID>MkdirsIfNotExists(expand('<afile>:h'))
 function! <SID>MkdirsIfNotExists(directory)
-  if(!isdirectory(a:directory))
-    call system('mkdir -p '.shellescape(a:directory))
-  endif
+if(!isdirectory(a:directory))
+call system('mkdir -p '.shellescape(a:directory))
+endif
 endfunction
 
 " CURSOR
@@ -154,12 +154,12 @@ let g:gruvbox_contrast_light = 'hard'
 hi Normal guibg=NONE ctermbg=NONE
 
 if (empty($TMUX))
-  if (has("nvim"))
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  if (has("termguicolors"))
-    set termguicolors
-  endif
+if (has("nvim"))
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+if (has("termguicolors"))
+set termguicolors
+endif
 endif
 
 nmap <C-b> <leader>lb

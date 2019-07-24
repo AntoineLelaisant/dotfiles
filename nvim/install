@@ -1,6 +1,6 @@
 #!/usr/bin/sh
 
-yay -S --noconfirm neovim vim-plug
+yay -S --noconfirm neovim vim-plug xsel
 
 # Python support for vim
 pip install neovim
