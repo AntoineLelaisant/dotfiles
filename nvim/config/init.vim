@@ -41,6 +41,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'jparise/vim-graphql'
 Plug 'posva/vim-vue'
 Plug 'chr4/nginx.vim'
+Plug 'evanleck/vim-svelte' " Svelte
 
 " PHP
 Plug 'arnaud-lb/vim-php-namespace'
