@@ -52,7 +52,6 @@ Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'}
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
 Plug 'phpactor/ncm2-phpactor' " php
-Plug 'ncm2/ncm2-tern' " javascript
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
 Plug 'ncm2/ncm2-ultisnips'
@@ -252,6 +251,10 @@ let g:phpspec_config_dir = 'apps/api'
 
 autocmd BufEnter * call ncm2#enable_for_buffer()
 set completeopt=noinsert,menuone,noselect
+
+" Ncm2 settings
+let ncm2#popup_delay = 200
+let g:ncm2#matcher = 'substrfuzzy'
 
 " Fzf
 let g:fzf_colors =
