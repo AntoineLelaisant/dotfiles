@@ -42,6 +42,7 @@ Plug 'jparise/vim-graphql'
 Plug 'posva/vim-vue'
 Plug 'chr4/nginx.vim'
 Plug 'evanleck/vim-svelte' " Svelte
+Plug 'amadeus/vim-mjml'
 
 " PHP
 Plug 'arnaud-lb/vim-php-namespace'
@@ -90,7 +91,6 @@ set ruler
 set clipboard=unnamedplus
 set hidden
 set directory=~/.vim/tmp
-au BufNewFile,BufRead *.twig set ft=htmljinja
 au BufNewFile,BufRead *.tsx set ft=typescript.jsx
 set incsearch
 set hlsearch
@@ -220,15 +220,6 @@ hi NERDTreeClosable ctermfg=green
 hi NERDTreeOpenable ctermfg=green
 hi NERDTreeDir ctermfg=green
 hi NERDTreeFlags ctermfg=white
-
-function! NERDTreeOnStartUp()
-    if 0 == argc()
-        NERDTree
-    end
-endfunction
-
-autocmd VimEnter * call NERDTreeOnStartUp()
-
 
 let g:jsx_ext_required = 0
 
