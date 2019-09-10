@@ -26,6 +26,7 @@ Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'godlygeek/tabular'
+Plug 'austintaylor/vim-commaobject'
 
 " vim airline
 Plug 'vim-airline/vim-airline'
