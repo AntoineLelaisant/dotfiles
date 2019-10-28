@@ -44,6 +44,7 @@ Plug 'posva/vim-vue'
 Plug 'chr4/nginx.vim'
 Plug 'evanleck/vim-svelte' " Svelte
 Plug 'amadeus/vim-mjml'
+Plug 'dart-lang/dart-vim-plugin'
 
 " PHP
 Plug 'arnaud-lb/vim-php-namespace'
