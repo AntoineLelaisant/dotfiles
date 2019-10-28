@@ -63,7 +63,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'w0rp/ale'
 
 " Tags
-Plug 'ludovicchabant/vim-gutentags'
+" Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 
 " Theme / Prettify
@@ -114,8 +114,6 @@ normal mZ
 normal `Z
 endfunction
 
-autocmd FileType php,js,jsx,ts,tsx,css,html,xml,yaml,vim autocmd BufWritePre <buffer> :call StripTrailingWhitespace()
-
 " Automatically create directory if it does not exist
 au BufWrite * :call <SID>MkdirsIfNotExists(expand('<afile>:h'))
 function! <SID>MkdirsIfNotExists(directory)
@@ -138,7 +136,9 @@ nmap <silent> <F2> "zyiw:exe ":tj ".@z.""<CR>
 let g:gutentags_ctags_extra_args = ['--kinds-PHP=cidf']
 let g:gutentags_exclude_filetypes = ['gitcommit', 'yaml', 'json', 'xml']
 
-filetype plugin indent on
+" Filetype support
+filetype on
+filetype plugin on
 
 set wildmenu
 set wildmode=list:longest
@@ -230,6 +230,12 @@ let g:ale_fixers = {
 \   'javascript': ['eslint'],
 \}
 let g:ale_fix_on_save = 1
+
+" ALE colors
+let g:ale_sign_error = '✖'
+let g:ale_sign_warning = '⚠'
+highlight ALEErrorSign ctermbg=None ctermfg=red
+highlight ALEWarningSign ctermbg=None ctermfg=yellow
 
 " Phpactor
 noremap <Leader><space> :call phpactor#ContextMenu()<CR>

@@ -2,4 +2,4 @@
 
 yay -S --noconfirm sxhkd
 
-cp -rf /home/antoine/.dotfiles/sxhkd/config /home/antoine/.config/sxhkd
+cp -rf /home/antoine/.dotfiles/sxhkd/config/* /home/antoine/.config/sxhkd

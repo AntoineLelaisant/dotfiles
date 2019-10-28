@@ -137,7 +137,7 @@ alt + ctrl + {h,j,k,l}
   bspc window -s {left,down,up,right}
 
 XF86MonBrightness{Up,Down}
-  light -{A,U} 10
+  xbacklight -{inc,dec} 10
 
 XF86Audio{Raise,Lower}Volume
   amixer -q -D pulse sset Master 2%{+,-}

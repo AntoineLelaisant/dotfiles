@@ -1,5 +1,5 @@
 #!/usr/bin/sh
 
-yay -S --noconfirm rofi
+#yay -S --noconfirm rofi-git
 
-cp -rf /home/antoine/.dotfiles/rofi/config /home/antoine/.config/rofi
+cp -rf /home/antoine/.dotfiles/rofi/config/* /home/antoine/.config/rofi
