@@ -39,6 +39,8 @@ setopt correct # Command correction
 
 setopt globdots # Hidden files tab completion
 
+setopt auto_pushd
+
 stty -ixon # Disables XON/XOFF flow control
 
 zstyle -e ':completion:*:default' list-colors 'reply=("${PREFIX:+=(#bi)($PREFIX:t)(?)*==34=34}:${(s.:.)LS_COLORS}")'; # Tab colors
@@ -126,7 +128,7 @@ alias rndbg='adb shell input keyevent 82'
 alias grep="rg"
 alias find="fd"
 alias f="fd"
-alias tmux='tmux -2'
+alias t='tmux -2'
 alias open-workspace='teamocil --layout ./.teamocil.yml --here'
 alias gpurge='purge = branch --merged master | grep -v master | xargs git branch -d'
 alias dcps="docker-compose ps"
