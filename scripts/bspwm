@@ -2,6 +2,6 @@
 
 yay -S --noconfirm bspwm sxhkd rofi
 
-ln -s $(git rev-parse --show-toplevel)/.config/bspwm /home/$(whoami)/.config/bspwm
-ln -s $(git rev-parse --show-toplevel)/.config/sxhkd /home/$(whoami)/.config/sxhkd
-ln -s $(git rev-parse --show-toplevel)/.config/rofi /home/$(whoami)/.config/rofi
+ln -sf $(git rev-parse --show-toplevel)/config/bspwm /home/$(whoami)/.config/bspwm
+ln -sf $(git rev-parse --show-toplevel)/config/sxhkd /home/$(whoami)/.config/sxhkd
+ln -sf $(git rev-parse --show-toplevel)/config/rofi /home/$(whoami)/.config/rofi

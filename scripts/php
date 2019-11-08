@@ -1,0 +1,5 @@
+#!/bin/sh
+
+yay -S --noconfirm php
+
+sudo ln -sf $(git rev-parse --show-toplevel)/etc/php/php.ini /etc/php/php.ini
