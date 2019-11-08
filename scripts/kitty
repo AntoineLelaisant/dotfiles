@@ -1,0 +1,5 @@
+#!/bin/sh
+
+yay -S --noconfirm kitty
+
+ln -sf $(git rev-parse --show-toplevel)/config/kitty /home/$(whoami)/.config/kitty
