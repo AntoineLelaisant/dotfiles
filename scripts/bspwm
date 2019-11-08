@@ -1,6 +1,6 @@
 #!/bin/sh
 
-yay -S --noconfirm bspwm sxhkd rofi
+yay -S --noconfirm bspwm sxhkd rofi thunar
 
 ln -sf $(git rev-parse --show-toplevel)/config/bspwm /home/$(whoami)/.config/bspwm
 ln -sf $(git rev-parse --show-toplevel)/config/sxhkd /home/$(whoami)/.config/sxhkd
