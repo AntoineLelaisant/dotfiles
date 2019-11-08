@@ -1,0 +1,64 @@
+#! /bin/sh
+
+bspc config external_rules_command "$HOME/.config/bspwm/external_rules"
+
+source "$HOME/.config/bspwm/scripts/set_desktops.sh"
+
+sourcesList=(
+"/etc/profile"
+"${HOME}/.profile"
+"${XDG_CONFIG_HOME:-"$HOME/.config"}/bspwm/autostart"
+)
+
+for file in "${sourcesList[@]}"; do
+  [ -r "${file}" ] && . "${file}"
+done
+
+gap=10
+
+sxhkd &
+
+background=$(xrdb -query | grep "background" | cut -f2 | sed -r 's/#//' | head -n 1)
+foreground=$(xrdb -query | grep "foreground" | cut -f2 | sed -r 's/#//' | head -n 1)
+color0=$(xrdb -query | grep "color0" | cut -f2 | sed -r 's/#//' | head -n 1)
+color1=$(xrdb -query | grep "color1" | cut -f2 | sed -r 's/#//' | head -n 1)
+color2=$(xrdb -query | grep "color2" | cut -f2 | sed -r 's/#//' | head -n 1)
+color3=$(xrdb -query | grep "color3" | cut -f2 | sed -r 's/#//' | head -n 1)
+color4=$(xrdb -query | grep "color4" | cut -f2 | sed -r 's/#//' | head -n 1)
+color5=$(xrdb -query | grep "color5" | cut -f2 | sed -r 's/#//' | head -n 1)
+color6=$(xrdb -query | grep "color6" | cut -f2 | sed -r 's/#//' | head -n 1)
+color7=$(xrdb -query | grep "color7" | cut -f2 | sed -r 's/#//' | head -n 1)
+color8=$(xrdb -query | grep "color8" | cut -f2 | sed -r 's/#//' | head -n 1)
+color9=$(xrdb -query | grep "color9" | cut -f2 | sed -r 's/#//' | head -n 1)
+color10=$(xrdb -query | grep "color10" | cut -f2 | sed -r 's/#//' | head -n 1)
+color11=$(xrdb -query | grep "color11" | cut -f2 | sed -r 's/#//' | head -n 1)
+
+bspc config border_width         3
+bspc config window_gap           8
+
+bspc config split_ratio          0.50
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+spc config paddingless_monocle true
+bspc config focus_follows_pointer false
+bspc config click_to_focus true
+bspc config normal_border_color "#000000"
+bspc config active_border_color "#000000"
+bspc config focused_border_color "#212121"
+bspc config presel_border_color "#000000"
+bspc config presel_feedback_color "#ffffff"
+bspc config initial_polarity second_child
+
+bspc config normal_frame_opacity 0.15
+bspc config focused_frame_opacity 0.15
+
+# bspc rule -r *:*
+bspc rule -a "*" split_dir=DIR
+#bspc rule -a \* node=focused split_dir=east
+
+bspc rule -a 'Firefox Developer Edition':Navigator state=floating follow=on focus=on
+bspc rule -a 'Firefox Developer Edition':Dialog state=floating
+
+xsetroot -cursor_name left_ptr
+
+setxkbmap fr

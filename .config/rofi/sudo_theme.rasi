@@ -1,0 +1,19 @@
+* {
+    background-color: #232731;
+    background: #23273180;
+    font: "Source Code Pro 15";
+}
+
+#inputbar {
+    children: [ entry ];
+}
+
+#window {
+    background-color: @background;
+    padding: 3ch;
+}
+
+#entry {
+    padding: 0.3em 0em 0.3em 0.6em;
+    text-color: #ffffff;
+}
