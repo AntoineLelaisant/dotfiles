@@ -3,7 +3,7 @@ install:
 	./scripts/base
 	./scripts/zsh
 	./scripts/nvim
-	./scripts/bspwm
+	./scripts/gui
 	./scripts/kitty
 	./scripts/php
 	./scripts/composer

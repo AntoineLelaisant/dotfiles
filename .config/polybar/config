@@ -1,0 +1,171 @@
+[colors]
+background = #ee282828
+foreground = ${xrdb:foreground:#222}
+foreground-alt = #888077
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+
+[bar/top]
+monitor = ${env:MONITOR}
+width = 99.1%
+height = 32
+offset-x = 8
+offset-y = 8
+radius = 0.0
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${xrdb:foreground:#FF0000}
+
+line-size = 4
+line-color = #f00
+
+padding-left = 0
+padding-right = 3
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = "Fira Code:style=Regular:pixelsize=11:antialias=true;1"
+font-1 = "SourceHanSans:style=Bold:pixelsize=11:antialias=true;1"
+font-2 = "Material Icons:style=Regular:pixelsize=11:antialias=true;1"
+font-3 = "EmojiOne:style=Regular:scale=10:antialias=true;1"
+font-4 = "Font Awesome 5 Free:style=Regular:pixelsize=11:antialias=true;1"
+font-5 = "Font Awesome 5 Free:style=Solid:pixelsize=11:antialias=true;1"
+font-6 = "Font Awesome 5 Brands:pixelsize=11:antialias=true;1"
+
+modules-left = bspwm
+modules-center = date
+modules-right = volume battery_work powermenu
+
+tray-position = right
+
+wm-restack = bspwm
+
+[module/bspwm]
+type = internal/bspwm
+label-focused = 
+label-focused-foreground = ${xrdb:foreground}
+label-focused-padding = 1
+
+label-occupied = 
+
+label-occupied-foreground = ${colors.foreground-alt}
+label-occupied-padding = 1
+
+label-urgent = 
+label-urgent-foreground = #d79921
+label-urgent-padding = 1
+
+label-empty = 
+
+label-empty-foreground = ${colors.foreground-alt}
+label-empty-padding = 1
+
+[module/battery_work]
+
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 95
+
+label-discharging = %percentage%%
+label-charging = %percentage%%
+label-full = %percentage%%
+
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
+format-charging =  <label-charging>
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+animation-charging-framerate = 750
+
+[module/battery_home]
+
+type = internal/battery
+battery = BAT1
+adapter = AC
+full-at = 95
+
+label-discharging = %percentage%%
+label-charging = %percentage%%
+label-full = %percentage%%
+
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
+format-charging =  <label-charging>
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+animation-charging-framerate = 750
+
+[module/date]
+type = internal/date
+interval = 5
+
+date = "%a."
+date-alt = " %Y-%m-%d"
+
+time = %H:%M
+time-alt = %H:%M:%S
+
+# format-underline = ${xrdb:color4}
+
+label = %date% %time%
+
+[module/volume]
+type = internal/alsa
+
+format-volume = <ramp-volume>  <label-volume>
+format-muted = <label-muted>
+label-volume = %percentage%%
+label-muted = 
+label-muted-foreground = #aaa
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+ramp-headphones-0 = 
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 60
+
+format = <ramp> <label>
+format-underline = #f50a4d
+format-warn = <ramp> <label-warn>
+format-warn-underline = ${self.format-underline}
+
+label = %temperature%
+label-warn = %temperature%
+label-warn-foreground = ${colors.secondary}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-foreground = ${colors.foreground-alt}
+
+[module/powermenu]
+type = custom/script
+exec = echo "Power Button"
+format = <label>
+format-foreground = ${colors.foreground}
+format-padding = 1
+label = 
+click-left = ~/.config/rofi/rofi-widgets/widgets/power-options.sh
+tail = false
+[settings]
+screenchange-reload = true
+compositing-background = xor
+compositing-foreground = source

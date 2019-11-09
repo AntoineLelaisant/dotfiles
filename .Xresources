@@ -1,0 +1,136 @@
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled:               true
+rofi.color-window:                argb:d92f343f, argb:0002b36, argb:0000000
+rofi.color-normal:                argb:0f3f4f5, #f3f4f5, argb:0f3f4f5, argb:0f3f4f5, #9575cd
+rofi.color-active:                argb:0f3f4f5, #9575cd, argb:0f3f4f5, argb:0f3f4f5, #f3f4f5
+rofi.color-urgent:                argb:0f3f4f5, #f3f4f5, argb:0f3f4f5, argb:0dc322f, #f3f4f5
+
+! Misc
+xft.lcdfilter:                    ldcdefault
+xft.hintstyle:                    hintslight
+
+! Visual 
+URxvt.geometry:                   90x25 
+URxvt.title:                      Terminal
+URxvt.depth:                      32
+URxvt.borderless:                 1
+URxvt.scrollBar:                  false
+URxvt.cursorBlink:                1
+URxvt.cursorUnderline:            1
+URxvt.font:                       xft:DejaVuSansMono Nerd Font:size=12:antialias=true
+
+! Plugins
+URxvt.perl-ext-common:            default,matcher,tabbedex
+URxvt.url-launcher:               /usr/bin/xdg-open
+
+! Tabbedex color
+URxvt.tabbed.tabbar-fg:           7
+URxvt.tabbed.tabbar-bg:           0
+URxvt.tabbed.tab-fg:              11
+URxvt.tabbed.tab-bg:              0
+
+! Tabs title
+URxvt.tabbed.title:               true
+URxvt.tabbed.title-bg:            0 
+URxvt.tabbed.title-fg:            7
+URxvt.urlLauncher:                firefox
+URxvt.matcher.button:             1
+URxvt.clipboard.autocopy:         true
+
+! History
+URxvt.saveLines:                  5000
+
+URxvt*depth:                      32
+
+! colors
+URxvt*background:                 [80]#000000
+URxvt*foreground:                 [100]#ffffff
+URxvt.transparent:                true
+URxvt.shading:                    0
+URxvt.cursorColor:                #ebdbb2
+! ! Black + DarkGrey
+URxvt.color0:                     #282828
+URxvt.color8:                     #928374
+! ! DarkRed + Red
+URxvt.color1:                     #cc241d
+URxvt.color9:                     #fb4934
+! ! DarkGreen + Green
+URxvt.color2:                     #98971a
+URxvt.color10:                    #b8bb26
+! ! DarkYellow + Yellow
+URxvt.color3:                     #d79921
+URxvt.color11:                    #fabd2f
+! ! DarkBlue + Blue
+URxvt.color4:                     #458588
+URxvt.color12:                    #83a598
+! ! DarkMagenta + Magenta
+URxvt.color5:                     #b16286
+URxvt.color13:                    #d3869b
+! ! DarkCyan + Cyan
+URxvt.color6:                     #689d6a
+URxvt.color14:                    #8ec07c
+! ! LightGrey + White
+URxvt.color7:                     #a89984
+URxvt.color15:                    #ebdbb2
+! for 256 color stuff
+URxvt.color24:                    #076678
+URxvt.color66:                    #427b58
+URxvt.color88:                    #9d0006
+URxvt.color96:                    #8f3f71
+URxvt.color100:                   #79740e
+URxvt.color108:                   #8ec07c
+URxvt.color109:                   #83a598
+URxvt.color130:                   #af3a03
+URxvt.color136:                   #b57614
+URxvt.color142:                   #b8bb26
+URxvt.color167:                   #fb4934
+URxvt.color175:                   #d3869b
+URxvt.color208:                   #fe8019
+URxvt.color214:                   #fabd2f
+URxvt.color223:                   #ebdbb2
+URxvt.color228:                   #f4e8ba
+URxvt.color229:                   #fdf4c1
+URxvt.color230:                   #ffffc8
+URxvt.color234:                   #1d2021
+URxvt.color235:                   #282828
+URxvt.color236:                   #32302f
+URxvt.color237:                   #3c3836
+URxvt.color239:                   #504945
+URxvt.color241:                   #665c54
+URxvt.color243:                   #7c6f64
+URxvt.color244:                   #928374
+URxvt.color245:                   #928374
+URxvt.color246:                   #a89984
+URxvt.color248:                   #bdae93
+URxvt.color250:                   #d5c4a1
+
+! hard contrast: *background: #1d2021
+*background: #282828
+! soft contrast: *background: #32302f
+*foreground: #ebdbb2
+! Black + DarkGrey
+*color0:  #282828
+*color8:  #928374
+! DarkRed + Red
+*color1:  #cc241d
+*color9:  #fb4934
+! DarkGreen + Green
+*color2:  #98971a
+*color10: #b8bb26
+! DarkYellow + Yellow
+*color3:  #d79921
+*color11: #fabd2f
+! DarkBlue + Blue
+*color4:  #458588
+*color12: #83a598
+! DarkMagenta + Magenta
+*color5:  #b16286
+*color13: #d3869b
+! DarkCyan + Cyan
+*color6:  #689d6a
+*color14: #8ec07c
+! LightGrey + White
+*color7:  #a89984
+*color15: #ebdbb2

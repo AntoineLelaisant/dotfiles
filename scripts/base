@@ -3,3 +3,6 @@
 yay -S --noconfirm git openssh wget zip unzip
 
 mkdir -p /home/$(whoami)/.config
+
+ln -sf $(git rev-parse --show-toplevel)/.gitconfig $HOME/.gitconfig
+ln -sf $(git rev-parse --show-toplevel)/.gitignore $HOME/.gitignore
