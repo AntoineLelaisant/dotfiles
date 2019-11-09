@@ -1,6 +1,6 @@
 #!/bin/sh
 
-yay -S --noconfirm bspwm sxhkd rofi polybar xinit thunar la-capitaine-icon-theme
+yay -S --noconfirm bspwm sxhkd rofi polybar xorg-xinit thunar la-capitaine-icon-theme
 
 ln -sf $(git rev-parse --show-toplevel)/.config/bspwm $HOME/.config/bspwm
 ln -sf $(git rev-parse --show-toplevel)/.config/sxhkd $HOME/.config/sxhkd
