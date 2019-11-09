@@ -1,11 +1,11 @@
 #!/bin/sh
 
-yay -S --noconfirm bspwm sxhkd rofi polybar xorg-xinit thunar la-capitaine-icon-theme
+yay -S --noconfirm xorg-server xf86-video-intel bspwm sxhkd rofi polybar xorg-xinit xorg-xsetroot thunar la-capitaine-icon-theme
 
-ln -sf $(git rev-parse --show-toplevel)/.config/bspwm $HOME/.config/bspwm
-ln -sf $(git rev-parse --show-toplevel)/.config/sxhkd $HOME/.config/sxhkd
-ln -sf $(git rev-parse --show-toplevel)/.config/rofi $HOME/.config/rofi
-ln -sf $(git rev-parse --show-toplevel)/.config/polybar $HOME/.config/polybar
+ln -sf $(git rev-parse --show-toplevel)/.config/bspwm $HOME/.config
+ln -sf $(git rev-parse --show-toplevel)/.config/sxhkd $HOME/.config
+ln -sf $(git rev-parse --show-toplevel)/.config/rofi $HOME/.config
+ln -sf $(git rev-parse --show-toplevel)/.config/polybar $HOME/.config
 ln -sf $(git rev-parse --show-toplevel)/.xinitrc $HOME/.xinitrc
 ln -sf $(git rev-parse --show-toplevel)/.xprofile $HOME/.xprofile
 ln -sf $(git rev-parse --show-toplevel)/.Xresources $HOME/.Xresources

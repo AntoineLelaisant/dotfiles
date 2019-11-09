@@ -2,4 +2,4 @@
 
 yay -S --noconfirm kitty
 
-ln -sf $(git rev-parse --show-toplevel)/.config/kitty $HOME/.config/kitty
+ln -sf $(git rev-parse --show-toplevel)/.config/kitty $HOME/.config
