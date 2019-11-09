@@ -1,0 +1,5 @@
+#!/bin/sh
+
+yay -S --noconfirm tmux
+
+ln -sf $(git rev-parse --show-toplevel)/.tmux.conf $HOME/.tmux.conf

@@ -5,5 +5,6 @@ install:
 	./scripts/nvim
 	./scripts/gui
 	./scripts/kitty
+	./scripts/tmux
 	./scripts/php
 	./scripts/composer
