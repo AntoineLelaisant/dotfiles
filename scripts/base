@@ -1,3 +1,5 @@
 #!/bin/sh
 
 yay -S --noconfirm git openssh wget zip unzip
+
+mkdir -p /home/$(whoami)/.config

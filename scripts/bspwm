@@ -1,7 +1,8 @@
 #!/bin/sh
 
-yay -S --noconfirm bspwm sxhkd rofi thunar
+yay -S --noconfirm bspwm sxhkd rofi xinit thunar
 
-ln -sf $(git rev-parse --show-toplevel)/config/bspwm /home/$(whoami)/.config/bspwm
-ln -sf $(git rev-parse --show-toplevel)/config/sxhkd /home/$(whoami)/.config/sxhkd
-ln -sf $(git rev-parse --show-toplevel)/config/rofi /home/$(whoami)/.config/rofi
+ln -sf $(git rev-parse --show-toplevel)/.config/bspwm $HOME/.config/bspwm
+ln -sf $(git rev-parse --show-toplevel)/.config/sxhkd $HOME/.config/sxhkd
+ln -sf $(git rev-parse --show-toplevel)/.config/rofi $HOME/.config/rofi
+ln -sf $(git rev-parse --show-toplevel)/.xinitrc $HOME/.xinitrc

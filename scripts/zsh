@@ -2,4 +2,4 @@
 
 yay -S --noconfirm zsh
 
-ln -sf $(git rev-parse --show-toplevel)/zshrc /home/$(whoami)/.zshrc
+ln -sf $(git rev-parse --show-toplevel)/.zshrc $HOME/.zshrc
