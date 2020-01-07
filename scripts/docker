@@ -1,0 +1,5 @@
+#!/bin/sh
+
+yay -S --noconfirm docker docker-compose docker-swarm
+
+sudo usermod -aG docker $USER

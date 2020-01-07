@@ -8,3 +8,4 @@ install:
 	./scripts/tmux
 	./scripts/php
 	./scripts/composer
+	./scripts/browsers

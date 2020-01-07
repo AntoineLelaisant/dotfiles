@@ -32,7 +32,7 @@ fi
 
 xsetroot -cursor_name left_ptr
 
-source $HOME/.xprofile
+#source $HOME/.xprofile
 source /etc/locale.conf
 
 exec bspwm

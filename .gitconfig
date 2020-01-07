@@ -30,6 +30,6 @@
 [interactive]
    diffFilter = /usr/share/doc/git/contrib/diff-highlight/diff-highlight
 [commit]
-	gpgsign = true
+#	gpgsign = true
 [gpg]
-	program = gpg
+#	program = gpg

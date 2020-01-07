@@ -22,7 +22,7 @@ Plug 'junegunn/fzf.vim'
 " Motions
 Plug 'easymotion/vim-easymotion'
 Plug 'mbbill/undotree'
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'godlygeek/tabular'
@@ -52,12 +52,12 @@ Plug 'rafi/vim-phpspec'
 Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'}
 
 " ncm2
-Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
-Plug 'phpactor/ncm2-phpactor' " php
-Plug 'ncm2/ncm2-bufword'
-Plug 'ncm2/ncm2-path'
-Plug 'ncm2/ncm2-ultisnips'
+"Plug 'ncm2/ncm2'
+"Plug 'roxma/nvim-yarp'
+"Plug 'phpactor/ncm2-phpactor' " php
+"Plug 'ncm2/ncm2-bufword'
+"Plug 'ncm2/ncm2-path'
+"Plug 'ncm2/ncm2-ultisnips'
 
 " CS
 Plug 'editorconfig/editorconfig-vim'
@@ -200,9 +200,9 @@ autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
 let g:php_namespace_sort_after_insert = 1
 
 " ULTISNIPS
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+"let g:UltiSnipsExpandTrigger="<tab>"
+"let g:UltiSnipsJumpForwardTrigger="<tab>"
+"let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
@@ -248,12 +248,12 @@ noremap <Leader>t :call phpactor#Transform()<CR>
 let g:phpspec_executable = 'docker-compose exec php phpspec'
 let g:phpspec_config_dir = 'apps/api'
 
-autocmd BufEnter * call ncm2#enable_for_buffer()
+"autocmd BufEnter * call ncm2#enable_for_buffer()
 set completeopt=noinsert,menuone,noselect
 
 " Ncm2 settings
-let ncm2#popup_delay = 200
-let g:ncm2#matcher = 'substrfuzzy'
+"let ncm2#popup_delay = 200
+"let g:ncm2#matcher = 'substrfuzzy'
 
 " Fzf
 let g:fzf_colors =
