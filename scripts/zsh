@@ -5,3 +5,5 @@ yay -S --noconfirm zsh zplug zsh-theme-powerlevel9k-git
 ln -sf $(git rev-parse --show-toplevel)/.zshrc $HOME/.zshrc
 
 chsh -s /usr/bin/zsh
+
+zplug install

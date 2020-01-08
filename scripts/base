@@ -1,6 +1,18 @@
 #!/bin/sh
 
-yay -S --noconfirm git openssh wget zip unzip
+yay -S --noconfirm \
+    git \
+    openssh \
+    wget \
+    man-db \
+    zip \
+    unzip \
+    exa \
+    fd \
+    ripgrep \
+    xclip \
+    diff-so-fancy \
+    neofetch
 
 mkdir -p /home/$(whoami)/.config
 

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+(cd $HOME && mkdir Projects Images Videos Documents Downloads)

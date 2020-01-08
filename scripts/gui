@@ -1,6 +1,26 @@
 #!/bin/sh
 
-yay -S --noconfirm xorg-server xf86-video-intel bspwm sxhkd rofi jq polybar xorg-xinit xorg-xsetroot picom thunar la-capitaine-icon-theme nerd-fonts-fira-code otf-font-awesome ttf-dejavu ttf-material-icons
+yay -S --noconfirm \
+    xorg-server \
+    xf86-video-intel \
+    bspwm \
+    xhkd \
+    rofi \
+    jq \
+    polybar \
+    xorg-xinit \
+    xorg-xsetroot \
+    picom \
+    thunar \
+    la-capitaine-icon-theme \
+    capitaine-cursors \
+    nerd-fonts-fira-code \
+    otf-font-awesome \
+    ttf-dejavu \
+    ttf-material-icons \
+    network-manager-applet \
+    arc-gtk-theme \
+    lxappearance
 
 ln -sf $(git rev-parse --show-toplevel)/.config/bspwm $HOME/.config
 ln -sf $(git rev-parse --show-toplevel)/.config/sxhkd $HOME/.config
