@@ -12,6 +12,10 @@ yay -S --noconfirm \
     xorg-xsetroot \
     picom \
     thunar \
+    meld \
+    xss-lock \
+    i3lock-color \
+    imagemagick \
     la-capitaine-icon-theme \
     capitaine-cursors \
     nerd-fonts-fira-code \

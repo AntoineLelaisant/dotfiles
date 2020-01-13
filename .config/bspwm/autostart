@@ -16,7 +16,7 @@ COLOR=$(shuf -n1 -e ~/.colors/*)
 SHORTCOLOR=$(echo $COLOR | sed "s@.*/@@")
 xrdb -merge $COLOR
 
-fix-bluetooth &
+# fix-bluetooth &
 xss-lock -- ~/.bin/lock &
 ~/.config/bspwm/scripts/autostart/loader.sh
 xbindkeys &

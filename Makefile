@@ -4,6 +4,7 @@ install:
 	./scripts/home
 	./scripts/zsh
 	./scripts/php
+	./scripts/nodejs
 	./scripts/tmux
 	./scripts/nvim
 	./scripts/gui

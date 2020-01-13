@@ -1,8 +1,11 @@
 #!/bin/sh
 
-yay -S --noconfirm neovim vim-plug xsel
+yay -S --noconfirm neovim vim-plug xsel python2-pip
 
 pip install neovim
+pip2 install --user neovim
+
+yarn global add neovim
 
 ln -sf $(git rev-parse --show-toplevel)/.config/nvim $HOME/.config
 
