@@ -84,9 +84,9 @@ set autoindent " automatically copy indentation from previous line
 set smartindent " indents one extra level according to current syntax
 " indents with tab = 4 spaces
 set ignorecase
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=0
 set mouse=a
 set ls=2
 set ruler
@@ -196,6 +196,7 @@ nmap <Leader>ut :UndotreeToggle<CR>
 
 autocmd FileType php inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
 autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
+autocmd FileType php setlocal tabstop=4
 
 let g:php_namespace_sort_after_insert = 1
 

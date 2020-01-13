@@ -11,20 +11,21 @@ is_internal()
 }
 
 pkill polybar
-  if [ "$displaysCount" -eq 1 ]; then
-    bspc monitor $displays -d 1 2 3 4 5 6 7 8 9 0
-    MONITOR=$displays polybar top &
 
-    exit 0
+if [ "$displaysCount" -eq 1 ]; then
+  bspc monitor $displays -d 1 2 3 4 5 6 7 8 9 0
+  MONITOR=$displays polybar top &
+
+  exit 0
+fi
+
+for display in $displays
+do
+  if is_internal $display; then
+    bspc monitor "$display" -d 1 2 3 4 5
+    MONITOR=$display polybar top &
+  else
+    bspc monitor "$display"  -d 6 7 8 9 0
+    MONITOR=$display polybar top &
   fi
-
-  for display in $displays
-  do
-    if is_internal $display; then
-      bspc monitor "$display" -d 1 2 3 4 5
-      MONITOR=$display polybar top &
-    else
-      bspc monitor "$display"  -d 6 7 8 9 0
-      MONITOR=$display polybar top &
-    fi
-  done
+done
