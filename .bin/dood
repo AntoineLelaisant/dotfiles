@@ -1,0 +1,50 @@
+#!/bin/sh
+
+if [ -z $1 ]
+then
+    COMMAND=sh
+else
+    COMMAND=$1
+    shift
+fi;
+
+CONTAINER_ID=$(docker ps --format "{{.ID}} {{.Image}}" | fzf -0 -1 | awk -F ' ' '{print $1}')
+
+case "$COMMAND" in
+    logs)
+        docker logs $CONTAINER_ID $@
+        ;;
+    top)
+        docker top $CONTAINER_ID
+        ;;
+    inspect)
+        docker inspect $CONTAINER_ID
+        ;;
+    stats)
+        docker stats $CONTAINER_ID
+        ;;
+    pause)
+        docker pause $CONTAINED_ID
+        ;;
+    unpause)
+        docker unpause $CONTAINED_ID
+        ;;
+    wait)
+        docker wait $CONTAINED_ID
+        ;;
+    stop)
+        docker stop $CONTAINED_ID
+        ;;
+    restart)
+        docker restart $CONTAINED_ID
+        ;;
+    kill)
+        docker kill $CONTAINED_ID
+        ;;
+    rm)
+        docker rm $CONTAINED_ID
+        ;;
+    *)
+        docker exec -it $CONTAINER_ID $COMMAND $@
+        ;;
+esac

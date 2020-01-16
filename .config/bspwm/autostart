@@ -18,7 +18,7 @@ xrdb -merge $COLOR
 
 # fix-bluetooth &
 xss-lock -- ~/.bin/lock &
-~/.config/bspwm/scripts/autostart/loader.sh
+~/.config/bspwm/scripts/autostart/home.sh
 xbindkeys &
 dunst &
 sleep 3 &

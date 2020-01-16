@@ -11,6 +11,11 @@ yay -S --noconfirm \
     xorg-xinit \
     xorg-xsetroot \
     picom \
+    feh \
+    xbindkeys \
+    dunst \
+    clipit \
+    redshift \
     thunar \
     meld \
     xss-lock \
@@ -30,6 +35,7 @@ ln -sf $(git rev-parse --show-toplevel)/.config/bspwm $HOME/.config
 ln -sf $(git rev-parse --show-toplevel)/.config/sxhkd $HOME/.config
 ln -sf $(git rev-parse --show-toplevel)/.config/rofi $HOME/.config
 ln -sf $(git rev-parse --show-toplevel)/.config/polybar $HOME/.config
+ln -sf $(git rev-parse --show-toplevel)/.config/dunst $HOME/.config
 ln -sf $(git rev-parse --show-toplevel)/.xinitrc $HOME/.xinitrc
 ln -sf $(git rev-parse --show-toplevel)/.xprofile $HOME/.xprofile
 ln -sf $(git rev-parse --show-toplevel)/.Xresources $HOME/.Xresources
