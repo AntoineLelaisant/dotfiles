@@ -1,20 +1,10 @@
 #! /bin/sh
 
-bspc config external_rules_command "$HOME/.config/bspwm/external_rules"
+#bspc config external_rules_command "$HOME/.config/bspwm/external_rules"
 
 sxhkd &
 
 source "$HOME/.config/bspwm/scripts/set_desktops.sh"
-
-#sourcesList=(
-#"/etc/profile"
-#"${HOME}/.profile"
-#"${XDG_CONFIG_HOME:-"$HOME/.config"}/bspwm/autostart"
-#)
-#
-#for file in "${sourcesList[@]}"; do
-#  [ -r "${file}" ] && . "${file}"
-#done
 
 source $HOME/.config/bspwm/autostart
 

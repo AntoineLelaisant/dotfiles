@@ -1,7 +1,6 @@
-#!/bin/sh
+#! /bin/sh
 
 displays=$(xrandr -q | grep ' connected' | awk '{print $1}')
-echo $displays
 displaysCount=$(echo "$displays" | wc -l)
 
 is_internal()
@@ -12,20 +11,21 @@ is_internal()
 
 pkill polybar
 
+battery=$(fd BAT /sys/class/power_supply -x echo {/})
+
 if [ "$displaysCount" -eq 1 ]; then
   bspc monitor $displays -d 1 2 3 4 5 6 7 8 9 0
-  MONITOR=$displays polybar top &
+  MONITOR=$displays BATTERY=$battery polybar top &
 
-  exit 0
+else
+  for display in $displays
+  do
+    if is_internal $display; then
+      bspc monitor "$display" -d 1 2 3 4 5
+      MONITOR=$display BATTERY=$battery polybar top &
+    else
+      bspc monitor "$display"  -d 6 7 8 9 0
+      MONITOR=$display BATTERY=$battery polybar top &
+    fi
+  done
 fi
-
-for display in $displays
-do
-  if is_internal $display; then
-    bspc monitor "$display" -d 1 2 3 4 5
-    MONITOR=$display polybar top &
-  else
-    bspc monitor "$display"  -d 6 7 8 9 0
-    MONITOR=$display polybar top &
-  fi
-done
