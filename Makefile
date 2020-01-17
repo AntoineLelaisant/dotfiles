@@ -8,6 +8,7 @@ install:
 	./scripts/tmux
 	./scripts/nvim
 	./scripts/gui
+	./scripts/fonts
 	./scripts/audio
 	./scripts/kitty
 	./scripts/composer

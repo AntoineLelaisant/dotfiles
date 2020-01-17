@@ -21,15 +21,15 @@ yay -S --noconfirm \
     xss-lock \
     i3lock-color \
     imagemagick \
+    adwaita-icon-theme \
     la-capitaine-icon-theme \
     capitaine-cursors \
-    nerd-fonts-fira-code \
-    otf-font-awesome \
-    ttf-dejavu \
-    ttf-material-icons \
     network-manager-applet \
     arc-gtk-theme \
     lxappearance
+
+# looks like xorg-xrdb were not found with yay
+sudo pacman -S --noconfirm xorg-xrdb
 
 ln -sf $(git rev-parse --show-toplevel)/.config/bspwm $HOME/.config
 ln -sf $(git rev-parse --show-toplevel)/.config/sxhkd $HOME/.config
@@ -39,5 +39,6 @@ ln -sf $(git rev-parse --show-toplevel)/.config/dunst $HOME/.config
 ln -sf $(git rev-parse --show-toplevel)/.xinitrc $HOME/.xinitrc
 ln -sf $(git rev-parse --show-toplevel)/.xprofile $HOME/.xprofile
 ln -sf $(git rev-parse --show-toplevel)/.Xresources $HOME/.Xresources
+ln -sf $(git rev-parse --show-toplevel)/.xbindkeysrc $HOME/.xbindkeysrc
 
 ln -sf $(git rev-parse --show-toplevel)/etc/X11/xorg.conf.d/00-keyboard.conf /etc/X11/xorg.conf.d/00-keyboard.conf

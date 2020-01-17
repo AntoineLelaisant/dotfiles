@@ -1,0 +1,10 @@
+#!/bin/sh
+
+yay -S --noconfirm \
+    nerd-fonts-fira-code \
+    otf-font-awesome \
+    ttf-dejavu \
+    ttf-material-icons \
+    ttf-roboto \
+    nerd-fonts-dejavu-complete \
+    ttf-font-awesome
