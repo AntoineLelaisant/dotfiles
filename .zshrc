@@ -1,3 +1,5 @@
+export TERM="xterm-256color"
+
 source /usr/share/zsh/scripts/zplug/init.zsh
 
 # Theme
