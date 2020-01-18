@@ -47,9 +47,9 @@ set -gqF @themepack-window-status-current-format "#{@themepack-window-status-cur
 set -gqF @themepack-window-status-format "#{@themepack-window-status-prefix}#{@themepack-window-status-format}#{@themepack-window-status-suffix}"
 
 # Powerline color options
-set -goq @powerline-color-main-1 colour39
-set -goq @powerline-color-main-2 colour81
-set -goq @powerline-color-main-3 colour75
+set -goq @powerline-color-main-1 colour245
+set -goq @powerline-color-main-2 colour250
+set -goq @powerline-color-main-3 colour245
 set -goq @powerline-color-black-1 black
 set -goq @powerline-color-grey-1 colour233
 set -goq @powerline-color-grey-2 colour235
@@ -57,6 +57,17 @@ set -goq @powerline-color-grey-3 colour238
 set -goq @powerline-color-grey-4 colour240
 set -goq @powerline-color-grey-5 colour243
 set -goq @powerline-color-grey-6 colour245
+
+#set -goq @powerline-color-main-1 colour39
+#set -goq @powerline-color-main-2 colour81
+#set -goq @powerline-color-main-3 colour75
+#set -goq @powerline-color-black-1 black
+#set -goq @powerline-color-grey-1 colour233
+#set -goq @powerline-color-grey-2 colour235
+#set -goq @powerline-color-grey-3 colour238
+#set -goq @powerline-color-grey-4 colour240
+#set -goq @powerline-color-grey-5 colour243
+#set -goq @powerline-color-grey-6 colour245
 
 # Powerline options
 set -goqF @powerline-color-activity-1 "#{@powerline-color-grey-6}"
