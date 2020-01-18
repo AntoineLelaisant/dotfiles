@@ -26,7 +26,8 @@ yay -S --noconfirm \
     capitaine-cursors \
     network-manager-applet \
     arc-gtk-theme \
-    lxappearance
+    lxappearance \
+    flameshot
 
 # looks like xorg-xrdb were not found with yay
 sudo pacman -S --noconfirm xorg-xrdb
