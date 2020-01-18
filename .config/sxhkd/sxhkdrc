@@ -76,7 +76,7 @@ super + {o,i}
   bspc node {older,newer} -f; \
   bspc wm -h on
 
-super + {1-9,0}
+super + {ampersand,eacute,quotedbl,apostrophe,parenleft,minus,egrave,underscore,ccedilla,agrave}
   bspc desktop -f '^{1-9,10}'
 
 # focus or send to the given desktop

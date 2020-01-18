@@ -2,13 +2,13 @@
 
 #bspc config external_rules_command "$HOME/.config/bspwm/external_rules"
 
-sxhkd &
-
 source "$HOME/.config/bspwm/scripts/set_desktops.sh"
 
 source $HOME/.config/bspwm/autostart
 
 gap=10
+
+sxhkd -m 1 &
 
 background=$(xrdb -query | grep "background" | cut -f2 | sed -r 's/#//' | head -n 1)
 foreground=$(xrdb -query | grep "foreground" | cut -f2 | sed -r 's/#//' | head -n 1)
