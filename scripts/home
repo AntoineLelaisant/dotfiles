@@ -3,3 +3,4 @@
 (cd $HOME && mkdir Projects Images Videos Documents Downloads)
 
 ln -sf $(git rev-parse --show-toplevel)/.bin $HOME
+cp $(git rev-parse --show-toplevel)/home/Images/* $HOME/Images

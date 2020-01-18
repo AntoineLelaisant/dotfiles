@@ -15,7 +15,6 @@ Plug 'vim-scripts/bufkill.vim'
 " Browse
 Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'sjbach/lusty'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
@@ -57,7 +56,7 @@ Plug 'roxma/nvim-yarp'
 Plug 'phpactor/ncm2-phpactor' " php
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
-Plug 'ncm1/ncm2-ultisnips'
+"Plug 'ncm1/ncm2-ultisnips'
 
 " CS
 Plug 'editorconfig/editorconfig-vim'
@@ -165,8 +164,6 @@ set termguicolors
 endif
 endif
 
-nmap <C-b> <leader>lb
-nmap <C-e> <leader>lr
 nmap <C-h> :bp<CR>
 nmap <C-l> :bn<CR>
 nnoremap <C-k> :BD<CR>              " Kill current buffer
@@ -284,7 +281,12 @@ command! -bang -nargs=* Rg
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
+" C-e bindings
+command! -bang DirectoryFiles
+  \ call fzf#vim#files(expand('%:h'), fzf#vim#with_preview(), <bang>0)
+
 map <C-f> <esc>:Rg
 noremap <C-p> <esc>:Files<CR>
+noremap <C-e> <esc>:DirectoryFiles<CR>
 
 noremap <C-c> <Esc>
