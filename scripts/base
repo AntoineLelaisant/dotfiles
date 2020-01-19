@@ -12,6 +12,7 @@ yay -S --noconfirm \
     ripgrep \
     xclip \
     diff-so-fancy \
+    keychain \
     neofetch
 
 mkdir -p /home/$(whoami)/.config

@@ -115,6 +115,8 @@ set -o emacs
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+eval $(keychain --eval --quiet id_rsa $HOME/.ssh/id_rsa)
+
 # Shortcuts
 alias v='nvim'
 alias vi='nvim'
