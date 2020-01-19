@@ -1,6 +1,7 @@
 #!/bin/sh
 
 yay -S --noconfirm \
+    arandr \
     xorg-server \
     xf86-video-intel \
     bspwm \

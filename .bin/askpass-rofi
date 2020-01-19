@@ -1,0 +1,7 @@
+#!/bin/sh
+
+rofi -dmenu \
+	-password \
+  -no-fixed-num-lines \
+  -theme sudo_theme \
+	-p "" < /dev/null
