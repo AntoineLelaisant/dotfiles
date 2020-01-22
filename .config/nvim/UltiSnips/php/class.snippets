@@ -1,17 +1,12 @@
-global !p
-import re
-def namespacing(path):
-  ns = re.sub(r"\\", "", re.sub(r"/", "\\\\", re.sub(r"(.*/[a-z]+)((/\w+)+)/\w+.php", "\\2", path), 0), 1)
-  if re.search(r"/spec/", path) is not None:
-    ns = "spec\\" + ns
-
-  return ns
-endglobal
-
 snippet cl "PSR0 class"
 <?php
 
-namespace `!p snip.rv = namespacing(path)`;
+namespace ${1:`!p
+relpath = os.path.relpath(path)
+m = re.search(r'[A-Z].+(?=/)', relpath)
+if m:
+	snip.rv = m.group().replace('/', '\\')
+`};
 
 class ${2:`!v expand('%:t:r', 'myClass')`} ${3}
 {
@@ -22,7 +17,12 @@ endsnippet
 snippet icl "PSR0 interface"
 <?php
 
-namespace `!p snip.rv = namespacing(path)`;
+namespace ${1:`!p
+relpath = os.path.relpath(path)
+m = re.search(r'[A-Z].+(?=/)', relpath)
+if m:
+	snip.rv = m.group().replace('/', '\\')
+`};
 
 interface ${2:`!v expand('%:t:r', 'myInterface')`} ${3}
 {
@@ -33,7 +33,12 @@ endsnippet
 snippet trait "PSR0 trait"
 <?php
 
-namespace `!p snip.rv = namespacing(path)`;
+namespace ${1:`!p
+relpath = os.path.relpath(path)
+m = re.search(r'[A-Z].+(?=/)', relpath)
+if m:
+	snip.rv = m.group().replace('/', '\\')
+`};
 
 trait ${2:`!v expand('%:t:r', 'myTrait')`} ${3}
 {
