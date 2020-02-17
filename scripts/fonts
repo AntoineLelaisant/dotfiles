@@ -1,10 +1,8 @@
 #!/bin/sh
 
-yay -S --noconfirm \
-    nerd-fonts-fira-code \
-    otf-font-awesome \
-    ttf-dejavu \
-    ttf-material-icons \
-    ttf-roboto \
-    nerd-fonts-dejavu-complete \
-    ttf-font-awesome
+root_dir=$(dirname $0)
+
+aria2c -i $root_dir/../fonts-list.txt -d ~/.local/share/fonts/ &&
+fc-cache
+
+yay -S --noconfirm --needed - < $root_dir/../fonts-packages.txt

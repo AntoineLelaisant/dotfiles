@@ -1,6 +1,6 @@
 #!/bin/sh
 
-yay -S --noconfirm \
+yay -S --needed --noconfirm \
     arandr \
     xorg-server \
     xf86-video-intel \
@@ -42,5 +42,3 @@ ln -sf $(git rev-parse --show-toplevel)/.xinitrc $HOME/.xinitrc
 ln -sf $(git rev-parse --show-toplevel)/.xprofile $HOME/.xprofile
 ln -sf $(git rev-parse --show-toplevel)/.Xresources $HOME/.Xresources
 ln -sf $(git rev-parse --show-toplevel)/.xbindkeysrc $HOME/.xbindkeysrc
-
-ln -sf $(git rev-parse --show-toplevel)/etc/X11/xorg.conf.d/00-keyboard.conf /etc/X11/xorg.conf.d/00-keyboard.conf

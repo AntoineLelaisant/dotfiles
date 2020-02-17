@@ -1,6 +1,6 @@
 #!/bin/sh
 
-yay -S --noconfirm \
+yay -S --needed --noconfirm \
     git \
     openssh \
     wget \
@@ -19,4 +19,4 @@ mkdir -p /home/$(whoami)/.config
 
 ln -sf $(git rev-parse --show-toplevel)/.gitconfig $HOME/.gitconfig
 ln -sf $(git rev-parse --show-toplevel)/.gitignore $HOME/.gitignore
-ln -sf $(git rev-parse --show-toplevel)/.ssh/config $HOME/.ssh/config
+#ln -sf $(git rev-parse --show-toplevel)/.ssh/config $HOME/.ssh/config

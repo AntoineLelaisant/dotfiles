@@ -1,5 +1,5 @@
 #!/bin/sh
 
-yay -S --noconfirm kitty
+yay -S --needed --noconfirm kitty
 
 ln -sf $(git rev-parse --show-toplevel)/.config/kitty $HOME/.config

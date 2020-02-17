@@ -1,0 +1,6 @@
+ttf-dejavu-emojiless
+adobe-source-han-sans-otc-fonts
+noto-fonts-emoji
+ttf-roboto
+otf-fira-code
+otf-font-awesome

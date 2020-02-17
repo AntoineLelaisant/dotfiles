@@ -13,6 +13,6 @@ install:
 	./scripts/kitty
 	./scripts/composer
 	./scripts/browsers
-	./scripts/slack
-	./scripts/spotify
-	./scripts/insomnia
+#	./scripts/slack
+#	./scripts/spotify
+#	./scripts/insomnia

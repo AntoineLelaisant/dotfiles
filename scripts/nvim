@@ -1,6 +1,6 @@
 #!/bin/sh
 
-yay -S --noconfirm neovim vim-plug xsel python2-pip
+yay -S --needed --noconfirm neovim vim-plug xsel python2-pip
 
 pip install neovim
 pip2 install --user neovim

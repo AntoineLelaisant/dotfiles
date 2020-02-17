@@ -1,6 +1,6 @@
 #!/bin/sh
 
-yay -S --noconfirm tmux
+yay -S --needed --noconfirm tmux
 
 ln -sf $(git rev-parse --show-toplevel)/.tmux.conf $HOME/.tmux.conf
 ln -sf $(git rev-parse --show-toplevel)/.config/tmux $HOME/.config
