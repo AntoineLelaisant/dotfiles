@@ -17,6 +17,7 @@ yay -S --needed --noconfirm \
     dunst \
     clipit \
     redshift \
+    playerctl \
     thunar \
     meld \
     xss-lock \
