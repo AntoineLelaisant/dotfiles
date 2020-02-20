@@ -105,7 +105,7 @@ let mapleader = ","
 
 " highlight trailing spaces
 set list
-set listchars=eol:ᛎ,trail:‧,tab:▹∙
+set listchars=trail:‧,tab:▹∙
 match ErrorMsg '\s\+$'
 
 function! StripTrailingWhitespace()
