@@ -29,19 +29,3 @@ interface ${2:`!v expand('%:t:r', 'myInterface')`} ${3}
     ${4}
 }
 endsnippet
-
-snippet trait "PSR0 trait"
-<?php
-
-namespace ${1:`!p
-relpath = os.path.relpath(path)
-m = re.search(r'[A-Z].+(?=/)', relpath)
-if m:
-	snip.rv = m.group().replace('/', '\\')
-`};
-
-trait ${2:`!v expand('%:t:r', 'myTrait')`} ${3}
-{
-    ${4}
-}
-endsnippet
