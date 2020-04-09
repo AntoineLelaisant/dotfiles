@@ -133,7 +133,7 @@ font-4 = "Font Awesome 5 Brands:pixelsize=11:antialias=true;1"
 
 modules-left = bspwm
 modules-center = date
-modules-right = alsa sysmenu
+modules-right = battery alsa sysmenu
 
 ; The separator will be inserted between the output of each module
 separator =

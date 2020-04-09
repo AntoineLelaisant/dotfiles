@@ -69,6 +69,7 @@ autoload -Uz compinit && compinit -i
 export ANDROID_HOME=${HOME}/Android/Sdk
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk/"
 export PATH=${PATH}:${HOME}/.bin
+export PATH=${PATH}:${HOME}/.local/bin
 export PATH=${PATH}:${ANDROID_HOME}/emulator
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools

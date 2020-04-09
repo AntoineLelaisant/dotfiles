@@ -53,4 +53,4 @@ bspc config focused_frame_opacity 0.15
 
 xsetroot -cursor_name left_ptr
 
-setxkbmap fr
+setxkbmap -option caps:super,grp:alt_shift_toggle us,'us(intl)' &

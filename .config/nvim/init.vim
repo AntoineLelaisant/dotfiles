@@ -81,7 +81,6 @@ set numberwidth=5
 set expandtab " converts tabs to spaces
 set autoindent " automatically copy indentation from previous line
 set smartindent " indents one extra level according to current syntax
-" indents with tab = 4 spaces
 set ignorecase
 set tabstop=2
 set softtabstop=2
@@ -174,16 +173,6 @@ nnoremap <leader>/ :noh<CR>
 
 nmap tt g<C-]>
 nmap TT <C-T>
-
-"unmap arrows
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
 
 " TAGBAR
 nmap <F8> :TagbarToggle<CR>
