@@ -198,3 +198,13 @@ _fzf_complete_docker_post() {
 }
 
 [ -n "$BASH" ] && complete -F _fzf_complete_docker -o default -o bashdefault docker
+
+# Find in files and return filenames
+fif() {
+  if [ ! "$#" -gt 0 ]; then echo "Need a string to search for!"; return 1; fi
+  rg --files-with-matches --no-messages "$1" | fzf --height 40% --multi --preview "highlight -O ansi -l {} 2> /dev/null | rg --colors 'match:bg:yellow' --pretty --context 10 '$1' || rg --pretty --context 10 '$1' {}"
+}
+
+rp() {
+  sd $1 $2 $(fif $1)
+}
