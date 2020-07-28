@@ -1,6 +1,6 @@
 #! /bin/sh
 
-displays=$(xrandr -q | grep ' connected' | awk '{print $1}')
+displays=$(xrandr -q | grep -v 'disconnected' | grep ' connected' | awk '{print $1}')
 displaysCount=$(echo "$displays" | wc -l)
 
 is_internal()

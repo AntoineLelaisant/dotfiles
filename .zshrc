@@ -67,7 +67,7 @@ fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
 
 export ANDROID_HOME=${HOME}/Android/Sdk
-export JAVA_HOME="/usr/lib/jvm/java-8-openjdk/"
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk/jre"
 export PATH=${PATH}:${HOME}/.bin
 export PATH=${PATH}:${HOME}/.local/bin
 export PATH=${PATH}:${ANDROID_HOME}/emulator

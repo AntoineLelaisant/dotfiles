@@ -28,7 +28,7 @@
 [pull]
     default = current
 [interactive]
-   diffFilter = /usr/share/doc/git/contrib/diff-highlight/diff-highlight
+   diffFilter = /usr/bin/diff-so-fancy
 [commit]
     gpgsign = true
 [gpg]
