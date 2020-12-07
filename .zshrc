@@ -68,6 +68,7 @@ autoload -Uz compinit && compinit -i
 
 export ANDROID_HOME=${HOME}/Android/Sdk
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk/jre"
+export _JAVA_AWT_WM_NONREPARENTING=1 # Fixes grey java apps
 export PATH=${PATH}:${HOME}/.bin
 export PATH=${PATH}:${HOME}/.local/bin
 export PATH=${PATH}:${ANDROID_HOME}/emulator
@@ -76,6 +77,7 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH=${PATH}:${HOME}/.yarn/bin
 export PATH=${PATH}:${JAVA_HOME}/bin:$PATH
 export PATH=${PATH}:${HOME}/lib/flutter/bin
+export PATH="$HOME/.symfony/bin:$PATH"
 
 export FZF_DEFAULT_COMMAND='fd --hidden --type f --follow --color=always --exclude .git'
 export FZF_DEFAULT_OPTS="--ansi"

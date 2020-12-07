@@ -41,7 +41,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'jparise/vim-graphql'
 Plug 'posva/vim-vue'
 Plug 'chr4/nginx.vim'
-Plug 'evanleck/vim-svelte' " Svelte
+Plug 'evanleck/vim-svelte'
 Plug 'amadeus/vim-mjml'
 Plug 'dart-lang/dart-vim-plugin'
 
@@ -64,7 +64,7 @@ Plug 'w0rp/ale'
 
 " Tags
 " Plug 'ludovicchabant/vim-gutentags'
-Plug 'majutsushi/tagbar'
+" Plug 'majutsushi/tagbar'
 
 " Theme / Prettify
 Plug 'morhetz/gruvbox'
@@ -80,7 +80,7 @@ set number
 set numberwidth=5
 set expandtab " converts tabs to spaces
 set autoindent " automatically copy indentation from previous line
-set smartindent " indents one extra level according to current syntax
+"set smartindent " indents one extra level according to current syntax
 set ignorecase
 set tabstop=2
 set softtabstop=2
@@ -92,6 +92,7 @@ set clipboard=unnamedplus
 set hidden
 set directory=~/.vim/tmp
 au BufNewFile,BufRead *.tsx set ft=typescript.jsx
+au BufNewFile,BufRead *.prisma set ft=graphql
 set incsearch
 set hlsearch
 set encoding=utf-8
@@ -258,6 +259,8 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
+let g:fzf_layout = { 'window': { 'width': 1, 'height': 1 } }
+
 " C-f bindings
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
@@ -270,12 +273,21 @@ command! -bang -nargs=* Rg
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
+" C-[ bindings
+command! -bang AllFiles
+  \ call fzf#run({
+  \  'source': 'fd --type f --follow --color=always -I',
+  \  'sink': 'e',
+  \  'window': { 'width': 1, 'height': 1 }
+  \ })
+
 " C-e bindings
 command! -bang DirectoryFiles
   \ call fzf#vim#files(expand('%:h'), fzf#vim#with_preview(), <bang>0)
 
 map <C-f> <esc>:Rg
 noremap <C-p> <esc>:Files<CR>
+"noremap <C-S-> <esc>:AllFiles<CR>
 noremap <C-e> <esc>:DirectoryFiles<CR>
 
 noremap <C-c> <Esc>
