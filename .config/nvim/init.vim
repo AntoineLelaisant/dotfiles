@@ -32,18 +32,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Syntax
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'beyondwords/vim-twig'
-Plug 'stephpy/vim-yaml'
-Plug 'ekalinin/Dockerfile.vim'
-Plug 'leafgarland/typescript-vim'
-Plug 'jparise/vim-graphql'
-Plug 'posva/vim-vue'
-Plug 'chr4/nginx.vim'
-Plug 'evanleck/vim-svelte'
-Plug 'amadeus/vim-mjml'
-Plug 'dart-lang/dart-vim-plugin'
+Plug 'sheerun/vim-polyglot'
 
 " PHP
 Plug 'arnaud-lb/vim-php-namespace'
