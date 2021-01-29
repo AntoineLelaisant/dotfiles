@@ -1,6 +1,6 @@
 #! /bin/sh
 
-displays=$(xrandr -q | grep -v 'disconnected' | grep ' connected' | awk '{print $1}')
+displays=$(bspc query --monitors --names)
 displaysCount=$(echo "$displays" | wc -l)
 
 is_internal()
@@ -18,6 +18,8 @@ if [ "$displaysCount" -eq 1 ]; then
   MONITOR=$displays BATTERY=$battery polybar top &
 
 else
+  bspc wm --reorder-monitor DP1 eDP1
+
   for display in $displays
   do
     if is_internal $display; then
