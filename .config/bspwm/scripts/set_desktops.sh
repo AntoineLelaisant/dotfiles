@@ -18,7 +18,7 @@ if [ "$displaysCount" -eq 1 ]; then
   MONITOR=$displays BATTERY=$battery polybar top &
 
 else
-  bspc wm --reorder-monitor DP1 eDP1
+  bspc wm --reorder-monitors DP1 eDP1
 
   for display in $displays
   do

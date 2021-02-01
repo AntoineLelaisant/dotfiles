@@ -136,6 +136,7 @@ alias grep="rg"
 alias find="fd"
 alias f="fd"
 alias t='tmux -2'
+alias j='just'
 alias open-workspace='teamocil --layout ./.teamocil.yml --here'
 alias gpurge='purge = branch --merged master | grep -v master | xargs git branch -d'
 alias dcps="docker-compose ps"
