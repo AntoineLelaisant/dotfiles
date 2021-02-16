@@ -5,7 +5,7 @@ yay -S --needed --noconfirm \
     xorg-server \
     xf86-video-intel \
     bspwm \
-    xhkd \
+    sxhkd \
     rofi \
     jq \
     polybar \
@@ -29,10 +29,11 @@ yay -S --needed --noconfirm \
     network-manager-applet \
     arc-gtk-theme \
     lxappearance \
-    flameshot
+    flameshot \
+    xorg-xrdb
 
 # looks like xorg-xrdb were not found with yay
-sudo pacman -S --noconfirm xorg-xrdb
+#sudo pacman -S --noconfirm xorg-xrdb
 
 ln -sf $(git rev-parse --show-toplevel)/.config/bspwm $HOME/.config
 ln -sf $(git rev-parse --show-toplevel)/.config/sxhkd $HOME/.config

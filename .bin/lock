@@ -24,7 +24,7 @@ done
 if [ "$arg_image" ]; then
     BKG_IMG="$arg_image"  # Passed image
 else
-    BKG_IMG="$FOLDER/arch.png"  # Default
+    BKG_IMG="$FOLDER/arch.jpg"  # Default
 fi
 
 if ! [ -e "$BKG_IMG" ]; then

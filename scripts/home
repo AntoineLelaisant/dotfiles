@@ -5,4 +5,4 @@
 ln -sf $(git rev-parse --show-toplevel)/.bin/askpass-rofi $HOME/.bin/askpass-rofi
 ln -sf $(git rev-parse --show-toplevel)/.bin/dood $HOME/.bin/dood
 ln -sf $(git rev-parse --show-toplevel)/.bin/lock $HOME/.bin/lock
-cp $(git rev-parse --show-toplevel)/home/* $HOME
+cp -r $(git rev-parse --show-toplevel)/home/* $HOME
