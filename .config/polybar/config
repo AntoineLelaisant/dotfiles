@@ -68,6 +68,7 @@ background = ${color.bg}
 ; Foreground ARGB color (e.g. #f00, #ff992a, #ddff1023)
 foreground = ${color.fg}
 
+
 ; Background gradient (vertical steps)
 ;   background-[0-9]+ = #aarrggbb
 ;;background-0 =
@@ -133,7 +134,7 @@ font-4 = "Font Awesome 5 Brands:pixelsize=11:antialias=true;1"
 
 modules-left = bspwm
 modules-center = date
-modules-right = battery alsa sysmenu
+modules-right = network battery alsa sysmenu
 
 ; The separator will be inserted between the output of each module
 separator =
@@ -173,12 +174,6 @@ tray-detached = true
 ; Tray icon max size
 tray-maxsize = 16
 
-; DEPRECATED! Since 3.3.0 the tray always uses pseudo-transparency
-; Enable pseudo transparency
-; Will automatically be enabled if a fully transparent
-; background color is defined using `tray-background`
-;tray-transparent = false
-
 ; Background color for the tray container
 ; ARGB color (e.g. #f00, #ff992a, #ddff1023)
 ; By default the tray container will use the bar
@@ -186,7 +181,7 @@ tray-maxsize = 16
 tray-background = ${root.background}
 
 ; Tray offset defined as pixel value (e.g. 35) or percentage (e.g. 50%)
-tray-offset-x = -100
+tray-offset-x = -280
 tray-offset-y = 0
 
 ; Pad the sides of each tray icon
@@ -292,9 +287,6 @@ cursor-scroll =
 ; expires or limit is reached.
 throttle-output = 5
 throttle-output-for = 10
-
-; Time in milliseconds that the input handler will wait between processing events
-throttle-input-for = 30
 
 ; Reload upon receiving XCB_RANDR_SCREEN_CHANGE_NOTIFY events
 screenchange-reload = false
@@ -435,10 +427,10 @@ type = internal/battery
 full-at = 99
 
 ; $ ls -1 /sys/class/power_supply/
-battery = ${env:BATTERY}
-adapter = ACAD
+battery = BAT0
+adapter = ADP1
 
-poll-interval = 2
+poll-interval = 5
 time-format = %H:%M
 
 ; Available tags:
@@ -453,7 +445,7 @@ format-charging = <animation-charging>
 ;   <bar-capacity>
 ;   <ramp-capacity>
 ;   <animation-discharging>
-format-discharging = <ramp-capacity>
+format-discharging = <label-discharging> <ramp-capacity>
 
 ; Available tags:
 ;   <label-full> (default)
@@ -493,6 +485,69 @@ animation-charging-4 = 
 
 ; Framerate in milliseconds
 animation-charging-framerate = 750
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/network]
+type = internal/network
+; Name of the network interface to display. You can get the names of the
+; interfaces on your machine with `ip link`
+; Wireless interfaces often start with `wl` and ethernet interface with `eno` or `eth`
+interface = wlp0s20f3
+
+; Seconds to sleep between updates
+; Default: 1
+interval = 3.0
+
+; Test connectivity every Nth update
+; A value of 0 disables the feature
+; NOTE: Experimental (needs more testing)
+; Default: 0
+;ping-interval = 3
+
+; Accumulate values from all interfaces
+; when querying for up/downspeed rate
+; Default: false
+accumulate-stats = true
+
+; Consider an `UNKNOWN` interface state as up.
+; Some devices like USB network adapters have
+; an unknown state, even when they're running
+; Default: false
+unknown-as-up = true
+
+; Available tags:
+;   <label-connected> (default)
+;   <ramp-signal>
+format-connected = <label-connected>
+
+; Available tags:
+;   <label-disconnected> (default)
+format-disconnected = <label-disconnected>
+
+; Available tags:
+;   <label-connected> (default)
+;   <label-packetloss>
+;   <animation-packetloss>
+format-packetloss = <animation-packetloss> <label-connected>
+
+; All labels support the following tokens:
+;   %ifname%    [wireless+wired]
+;   %local_ip%  [wireless+wired]
+;   %local_ip6% [wireless+wired]
+;   %essid%     [wireless]
+;   %signal%    [wireless]
+;   %upspeed%   [wireless+wired]
+;   %downspeed% [wireless+wired]
+;   %linkspeed% [wired]
+
+; Default: %ifname% %local_ip%
+label-connected = ﰵ%upspeed:9%         ﰬ%downspeed:9%
+label-connected-foreground = #eefafafa
+
+; Default: (none)
+label-disconnected = not connected
+label-disconnected-foreground = #66ffffff
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
