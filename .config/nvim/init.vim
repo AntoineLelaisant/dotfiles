@@ -29,6 +29,7 @@ Plug 'austintaylor/vim-commaobject'
 
 " vim airline
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Syntax
 Plug 'sheerun/vim-polyglot'
