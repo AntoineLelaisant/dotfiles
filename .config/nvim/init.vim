@@ -29,10 +29,10 @@ Plug 'austintaylor/vim-commaobject'
 
 " vim airline
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 
 " Syntax
 Plug 'sheerun/vim-polyglot'
+Plug 'peitalin/vim-jsx-typescript'
 
 " PHP
 Plug 'arnaud-lb/vim-php-namespace'
@@ -80,7 +80,6 @@ set ruler
 set clipboard=unnamedplus
 set hidden
 set directory=~/.vim/tmp
-au BufNewFile,BufRead *.tsx set ft=typescript.jsx
 au BufNewFile,BufRead *.prisma set ft=graphql
 set incsearch
 set hlsearch

@@ -33,3 +33,5 @@
     gpgsign = true
 [gpg]
     program = gpg
+[hub]
+	protocol = git
