@@ -132,6 +132,7 @@ alias ll='exa -l'
 alias lla='exa -la'
 alias cal='cal -m'
 alias rndbg='adb shell input keyevent 82'
+alias logcat="adb logcat -v color"
 alias grep="rg"
 alias find="fd"
 alias f="fd"

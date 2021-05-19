@@ -1,0 +1,15 @@
+{
+  "eslint.autoFixOnSave": true,
+  "tsserver.disableAutomaticTypeAcquisition": false,
+  "stylelintplus.cssInJs": true,
+  "diagnostic.infoSign": "ⓘ",
+  "diagnostic.warningSign": "⚠",
+  "diagnostic.errorSign": "⨯",
+  "yaml.schemaStore.enable": true,
+  "yaml.schemas": {
+    "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json": [
+      "**/docker-compose*.yaml",
+      "**/docker-compose*.yml"
+    ]
+  }
+}
