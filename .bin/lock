@@ -40,30 +40,30 @@ OUTPUT_IMG_HEIGHT=0 # Decide size to cover all screens
 
 #i3lock command
 LOCK_BASE_CMD=" i3lock -i $OUTPUT_IMG \
-    --insidecolor=282828FF \
-    --insidevercolor=FABD2FFF \
-    --insidewrongcolor=FB4934FF \
-    --ringcolor=282828FF \
-    --ringvercolor=282828FF \
-    --ringwrongcolor=282828FF \
-    --linecolor=EBDBB2FF \
-    --keyhlcolor=EBDBB2FF \
-    --bshlcolor=FB4934FF \
-    --separatorcolor=282828FF \
-    --timecolor=EBDBB2FF \
-    --datecolor=00000000 \
-    --layoutcolor=00000000 \
-    --indpos=100:720 \
-    --timepos=210:732 \
-    --timestr=%H:%M \
+    --inside-color=282828FF \
+    --insidever-color=FABD2FFF \
+    --insidewrong-color=FB4934FF \
+    --ring-color=282828FF \
+    --ringver-color=282828FF \
+    --ringwrong-color=282828FF \
+    --line-color=EBDBB2FF \
+    --keyhl-color=EBDBB2FF \
+    --bshl-color=FB4934FF \
+    --separator-color=282828FF \
+    --time-color=EBDBB2FF \
+    --date-color=00000000 \
+    --layout-color=00000000 \
+    --ind-pos=100:720 \
+    --time-pos=210:732 \
+    --time-str=%H:%M \
     --time-font='monospace' \
     --force-clock \
     --refresh-rate=30 \
     --radius=32 \
     --ring-width=4 \
-    --veriftext= \
-    --wrongtext= \
-    --noinputtext= \
+    --verif-text= \
+    --wrong-text= \
+    --noinput-text= \
     --ignore-empty-password"
 if [ "$lock_args" ]; then
         LOCK_ARGS="$lock_args"  # Passed command
