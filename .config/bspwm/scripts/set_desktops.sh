@@ -9,13 +9,14 @@ is_internal()
   [ "$display" = 'eDP1' ] || [ "$display" = 'eDP-1' ]
 }
 
-pkill polybar
-
-battery=$(fd BAT /sys/class/power_supply -x echo {/})
+launch_polybar()
+{
+  $HOME/.config/polybar/launch.sh --shades
+}
 
 if [ "$displaysCount" -eq 1 ]; then
   bspc monitor $displays -d 1 2 3 4 5 6 7 8 9 0
-  MONITOR=$displays BATTERY=$battery polybar top &
+  MONITOR=$displays launch_polybar &
 
 else
   bspc wm --reorder-monitors HDMI1 eDP1
@@ -24,10 +25,10 @@ else
   do
     if is_internal $display; then
       bspc monitor "$display" -d 1 2 3 4 5
-      MONITOR=$display BATTERY=$battery polybar top &
+      MONITOR=$display launch_polybar &
     else
       bspc monitor "$display"  -d 6 7 8 9 0
-      MONITOR=$display BATTERY=$battery polybar top &
+      MONITOR=$display launch_polybar &
     fi
   done
 fi
