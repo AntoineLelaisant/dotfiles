@@ -1,2 +1,2 @@
-feh --bg-fill ~/Images/space-background.jpg 
+feh --bg-fill ~/Images/nordic-landscape.jpeg
 picom &

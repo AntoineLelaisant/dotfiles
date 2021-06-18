@@ -147,7 +147,6 @@ alias dcs="docker stop $(docker ps -aq)"
 alias dcp="docker rm $(docker ps -aq)"
 alias pbcopy="xclip -sel clip"
 alias docker-top='docker run -ti -v /var/run/docker.sock:/var/run/docker.sock quay.io/vektorlab/ctop:latest'
-alias git="hub"
 
 zplug load
 

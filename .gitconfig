@@ -35,3 +35,5 @@
     program = gpg
 [hub]
 	protocol = git
+[init]
+	defaultBranch = master
