@@ -32,6 +32,9 @@ yay -S --needed --noconfirm \
     flameshot \
     xorg-xrdb
 
+# Needed for polybar spotify script
+pip install dbus-python
+
 # looks like xorg-xrdb were not found with yay
 #sudo pacman -S --noconfirm xorg-xrdb
 

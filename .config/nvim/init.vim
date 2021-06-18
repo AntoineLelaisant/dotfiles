@@ -35,6 +35,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'ap/vim-css-color'
 
 " PHP
 Plug 'arnaud-lb/vim-php-namespace'

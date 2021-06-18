@@ -1,4 +1,4 @@
-#!/usr/src
+#!/bin/sh
 
 export SUDO_ASKPASS=$HOME/.bin/askpass-rofi
 export $XDG_CONFIG_HOME=$HOME/.config

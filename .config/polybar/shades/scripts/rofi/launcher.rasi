@@ -28,7 +28,7 @@ window {
 	border:							0px;
 	border-color:					@ac;
     border-radius:                  0px;
-	width:							550px;
+	width:							300px;
     location:                       center;
     x-offset:                       0;
     y-offset:                       0;
@@ -68,9 +68,9 @@ inputbar {
 
 listview {
     background-color:               @al;
-    padding:                        10px 10px 10px 10px;
-    columns:                        2;
-    lines:                          7;
+    padding:                        0px;
+    columns:                        1;
+    lines:                          5;
     spacing:                        5px;
     cycle:                          true;
     dynamic:                        true;
