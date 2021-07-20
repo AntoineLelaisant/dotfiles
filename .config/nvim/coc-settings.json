@@ -11,5 +11,8 @@
       "**/docker-compose*.yaml",
       "**/docker-compose*.yml"
     ]
-  }
+  },
+  "phpactor.enable": true,
+  "phpactor.path": "/home/antoine/.local/share/nvim/plugged/phpactor/bin/phpactor",
+  "typescript.preferences.importModuleSpecifier": "non-relative" 
 }

@@ -20,3 +20,4 @@ Guardfile
 node_modules
 cache
 logs
+.phpactor.json

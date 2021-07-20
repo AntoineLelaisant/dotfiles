@@ -54,6 +54,7 @@ Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
 Plug 'coc-extensions/coc-svelte', {'do': 'yarn install --frozen-lockfile'}
 Plug 'iamcco/coc-svg', {'do': 'yarn install --frozen-lockfile'}
 Plug 'khanghoang/coc-jest', {'do': 'yarn install --frozen-lockfile'}
+Plug 'phpactor/coc-phpactor', {'do': 'yarn install --frozen-lockfile'}
 
 " CS
 Plug 'editorconfig/editorconfig-vim'
@@ -175,6 +176,7 @@ nmap <Leader>ut :UndotreeToggle<CR>
 autocmd FileType php inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
 autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
 autocmd FileType php setlocal tabstop=4
+autocmd FileType php set iskeyword+=$
 
 let g:php_namespace_sort_after_insert = 1
 
@@ -251,13 +253,11 @@ command! -bang -nargs=* Rg
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
-" C-[ bindings
-command! -bang AllFiles
-  \ call fzf#run({
-  \  'source': 'fd --type f --follow --color=always -I',
-  \  'sink': 'e',
-  \  'window': { 'width': 1, 'height': 1 }
-  \ })
+" C-m bindings
+command! -bang -nargs=? -complete=dir AllFiles
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({
+  \'source': 'fd -t f -H --no-ignore --color=always',
+  \}), <bang>0)
 
 " C-e bindings
 command! -bang DirectoryFiles
@@ -265,7 +265,7 @@ command! -bang DirectoryFiles
 
 map <C-f> <esc>:Rg
 noremap <C-p> <esc>:Files<CR>
-"noremap <C-S-> <esc>:AllFiles<CR>
+noremap <C-m> <esc>:AllFiles<CR>
 noremap <C-e> <esc>:DirectoryFiles<CR>
 
 noremap <C-c> <Esc>

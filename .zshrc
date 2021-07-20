@@ -134,8 +134,6 @@ alias cal='cal -m'
 alias rndbg='adb shell input keyevent 82'
 alias logcat="adb logcat -v color"
 alias grep="rg"
-alias find="fd"
-alias f="fd"
 alias t='tmux -2'
 alias j='just'
 alias open-workspace='teamocil --layout ./.teamocil.yml --here'
@@ -147,6 +145,7 @@ alias dcs="docker stop $(docker ps -aq)"
 alias dcp="docker rm $(docker ps -aq)"
 alias pbcopy="xclip -sel clip"
 alias docker-top='docker run -ti -v /var/run/docker.sock:/var/run/docker.sock quay.io/vektorlab/ctop:latest'
+alias dotfiles='cd ~/.dotfiles'
 
 zplug load
 

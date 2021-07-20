@@ -14,6 +14,8 @@ launch_polybar()
   $HOME/.config/polybar/launch.sh --shades
 }
 
+$HOME/.config/bspwm/scripts/reorder.sh
+
 if [ "$displaysCount" -eq 1 ]; then
   bspc monitor $displays -d 1 2 3 4 5 6 7 8 9 0
   MONITOR=$displays launch_polybar &
@@ -27,7 +29,7 @@ else
       bspc monitor "$display" -d 1 2 3 4 5
       MONITOR=$display launch_polybar &
     else
-      bspc monitor "$display"  -d 6 7 8 9 0
+      bspc monitor "$display" -d 6 7 8 9 0
       MONITOR=$display launch_polybar &
     fi
   done
