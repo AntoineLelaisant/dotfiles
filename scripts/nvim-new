@@ -1,0 +1,5 @@
+#!/bin/sh
+
+rm $HOME/.config/nvim
+
+ln -sf $(git rev-parse --show-toplevel)/.config/nvim-new $HOME/.config/nvim
