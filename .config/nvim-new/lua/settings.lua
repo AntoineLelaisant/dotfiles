@@ -1,7 +1,7 @@
 vim.o.termguicolors = true
 
 vim.g.background = "dark"
-vim.cmd[[colorscheme gruvbox]]
+vim.cmd('colorscheme gruvbox')
 
 vim.api.nvim_command('autocmd VimEnter * hi Normal ctermbg=NONE guibg=NONE')
 

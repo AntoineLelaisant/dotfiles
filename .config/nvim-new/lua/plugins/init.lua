@@ -48,14 +48,6 @@ return require('packer').startup(function()
     'onsails/lspkind-nvim',
     config = function() require'plugins.config.lspkind' end
   }
-  use {
-    'windwp/nvim-autopairs',
-    config = function() require'plugins.config.nvim-autopairs' end
-  }
-  use {
-    'karb94/neoscroll.nvim',
-    config = function() require'plugins.config.neoscroll' end
-  } -- Smooth scroll
   use {'folke/lsp-colors.nvim', event = 'BufRead'} -- Add missing colors to LSP
   use {
     'norcalli/nvim-colorizer.lua',
@@ -85,28 +77,13 @@ return require('packer').startup(function()
     requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}, {'nvim-telescope/telescope-media-files.nvim'}},
     config = function() require'plugins.config.telescope' end
   } -- Fuzzy browser
-  use {'ggandor/lightspeed.nvim', event = 'BufRead'} -- Ninja moves
   use 'nvim-telescope/telescope-fzf-writer.nvim' -- Unlock Telescope hyperspeed
-  use {
-    "folke/todo-comments.nvim",
-    requires = "nvim-lua/plenary.nvim",
-    config = function() require'plugins.config.todo-comments' end,
-    event = 'BufRead'
-  }
-  use {
-    'b3nj5m1n/kommentary',
-    config = function() require'plugins.config.kommentary' end
-  } -- Commenting
   use {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
     cmd = 'TroubleToggle',
     config = function() require'plugins.config.trouble' end
   }
-  use "Pocco81/TrueZen.nvim" -- Goyo successor
-  use 'lambdalisue/suda.vim' -- End the read only nightmare
-  use 'jbyuki/instant.nvim' -- Collaboration yeah!
-  use 'mhartington/formatter.nvim' -- Formatters support
   use {
     'lewis6991/gitsigns.nvim',
     requires = {
@@ -116,32 +93,9 @@ return require('packer').startup(function()
     event = "BufRead"
   }
   use {
-    "folke/which-key.nvim",
-    config = function() require'plugins.config.which-key' end
-  }
-  use {
-    'sudormrfbin/cheatsheet.nvim',
-    requires = {
-      {'nvim-telescope/telescope.nvim'},
-      {'nvim-lua/popup.nvim'},
-      {'nvim-lua/plenary.nvim'},
-    },
-    disabled = {"nerd-fonts.nvim"}
-  }
-  use {
-    'iamcco/markdown-preview.nvim',
-    run = 'cd app && npm install',
-    ft = 'markdown'
-  }
-  use {
     'windwp/nvim-spectre',
     config = function() require'plugins.config.spectre' end,
     event = "BufRead",
   } -- Search and replace
-  use {
-    "nacro90/numb.nvim",
-    config = function() require'plugins.config.numb' end,
-    event = "BufRead",
-  }
 end)
 

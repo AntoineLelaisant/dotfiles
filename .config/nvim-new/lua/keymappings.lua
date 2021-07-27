@@ -1,8 +1,18 @@
-vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>r', ':NvimTreeRefresh<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>n', ':NvimTreeFindFile<CR>', { noremap = true, silent = true })
+-- Global
+
 vim.api.nvim_set_keymap('n', '<Leader><Space>', ':noh<CR>', { noremap = true, silent = true })
 
+-- Buffer nav
+vim.api.nvim_set_keymap('n', '<C-l>', ':bn<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-h>', ':bp<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-k>', ':bdelete! %<CR>', { noremap = true, silent = true })
+
+-- Nvim tree
+vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-r>', ':NvimTreeRefresh<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>f', ':NvimTreeFindFile<CR>', { noremap = true, silent = true })
+
+-- LSP Saga
 vim.api.nvim_set_keymap('n', 'gh', [[<Cmd> lua require'lspsaga.provider'.lsp_finder()<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>ca', [[<Cmd> lua require'lspsaga.codeaction'.code_action()<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'K', [[<Cmd> lua require'lspsaga.hover'.hover_doc()<CR>]], { noremap = true, silent = true })
@@ -13,7 +23,8 @@ vim.api.nvim_set_keymap('n', '[e', [[<Cmd> lua require'lspsaga.diagnostic'.lsp_j
 vim.api.nvim_set_keymap('n', ']e', [[<Cmd> lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>D', [[<Cmd> lua vim.lsp.buf.type_definition()<CR>]], { noremap = true, silent = true })
 
-vim.api.nvim_set_keymap('n', '<C-p>', [[<Cmd>lua require'telescope.builtin'.find_files()<CR>]], { noremap = true, silent = true })
+-- Telescope
+vim.api.nvim_set_keymap('n', '<C-p>', ':Telescope find_files find_command=rg,--ignore,--hidden,--files<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-f>', [[<Cmd>lua require'telescope.builtin'.live_grep()<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-b>', [[<Cmd>lua require'telescope.builtin'.buffers()<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>fh', [[<Cmd>lua require'telescope.builtin'.help_tags()<CR>]], { noremap = true, silent = true })

@@ -22,6 +22,7 @@ require('telescope').load_extension('media_files')
 require'telescope'.setup {
   defaults = {
     buffer_previewer_maker = new_maker,
+    prompt_prefix = "🔎 "
   },
   extensions = {
     media_files = {

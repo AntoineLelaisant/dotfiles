@@ -1,15 +1,28 @@
 require'bufferline'.setup{
-  options = {
-    numbers = "ordinal",
-  },
   highlights = {
+    fill = {
+      guifg = '#F4CEA9',
+      guibg = "#3A3A3A"
+    },
+    background = {
+      guifg = '#F4CEA9',
+      guibg = "#3A3A3A"
+    },
+    close_button_selected = {
+      guifg = '#F4CEA9',
+      guibg = "#3A3A3A"
+    },
     buffer_selected = {
-      guifg = '#e0e0e0',
+      guifg = '#F4CEA9',
+      guibg = "#3A3A3A",
       gui = "bold,italic"
     },
-    indicator_selected = {
-      guifg = '#e0e0e0',
-      guibg = '#e0e0e0',
-    },
+    separator_selected = {
+        guifg = '#F4CEA9',
+        guibg = '#3A3A3A'
+    }
+  },
+  options = {
+    separator_style = 'thin',
   }
 }
