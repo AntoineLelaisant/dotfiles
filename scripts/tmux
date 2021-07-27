@@ -1,6 +1,7 @@
 #!/bin/sh
 
-yay -S --needed --noconfirm tmux
+yay -S --needed --noconfirm tmux alacritty
 
 ln -sf $(git rev-parse --show-toplevel)/.tmux.conf $HOME/.tmux.conf
 ln -sf $(git rev-parse --show-toplevel)/.config/tmux $HOME/.config
+ln -sf $(git rev-parse --show-toplevel)/.config/alacritty $HOME/.config
