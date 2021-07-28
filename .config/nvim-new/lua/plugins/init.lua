@@ -56,12 +56,6 @@ return require('packer').startup(function()
   use {'michaelb/sniprun', run = 'bash ./install.sh'} -- Code runner
   use {'jared-mackey/gruvbox.nvim', requires = {'rktjmp/lush.nvim'}} -- Color theme
   use {
-    'lukas-reineke/indent-blankline.nvim',
-    branch = 'lua',
-    config = function() require'plugins.config.indent-blankline' end,
-    event = 'BufRead',
-  }
-  use {
     'akinsho/nvim-bufferline.lua',
     requires = 'kyazdani42/nvim-web-devicons',
     config = function() require'plugins.config.nvim-bufferline' end
