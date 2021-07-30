@@ -25,7 +25,7 @@ vim.api.nvim_set_keymap('n', '[e', [[<Cmd> lua require'lspsaga.diagnostic'.lsp_j
 vim.api.nvim_set_keymap('n', ']e', [[<Cmd> lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>]], { noremap = true, silent = true })
 
 -- Telescope
-vim.api.nvim_set_keymap('n', '<C-p>', ':Telescope find_files find_command=rg,--ignore,--hidden,--files<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-p>', [[<Cmd>lua require'telescope.builtin'.find_files()<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-f>', [[<Cmd>lua require'telescope.builtin'.live_grep()<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-b>', [[<Cmd>lua require'telescope.builtin'.buffers()<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>fh', [[<Cmd>lua require'telescope.builtin'.help_tags()<CR>]], { noremap = true, silent = true })

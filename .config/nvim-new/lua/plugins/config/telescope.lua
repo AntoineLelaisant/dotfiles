@@ -22,10 +22,18 @@ require('telescope').load_extension('media_files')
 require'telescope'.setup {
   defaults = {
     buffer_previewer_maker = new_maker,
-    prompt_prefix = "🔎 "
+    prompt_prefix = "🔎 ",
   },
-  find_files = {
-    theme = "dropdown",
+  pickers = {
+    find_files = {
+      layout_strategy = "vertical",
+      find_command = {
+        "rg",
+        "--ignore",
+        "--hidden",
+        "--files"
+      }
+    },
   },
   extensions = {
     media_files = {
