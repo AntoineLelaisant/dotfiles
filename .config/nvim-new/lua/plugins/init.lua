@@ -91,5 +91,12 @@ return require('packer').startup(function()
     config = function() require'plugins.config.spectre' end,
     event = "BufRead",
   } -- Search and replace
+  use 'schickling/vim-bufonly'
+  use 'qpkorr/vim-bufkill'
+  use {
+    'phpactor/phpactor',
+    run = 'composer install'
+  }
+  use 'SirVer/ultisnips'
 end)
 

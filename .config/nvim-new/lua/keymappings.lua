@@ -5,7 +5,7 @@ vim.api.nvim_set_keymap('n', '<Leader><Space>', ':noh<CR>', { noremap = true, si
 -- Buffer nav
 vim.api.nvim_set_keymap('n', '<C-l>', ':bn<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-h>', ':bp<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-k>', ':bdelete! %<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-k>', ':BD<CR>', { noremap = true, silent = true })
 
 -- Nvim tree
 vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
