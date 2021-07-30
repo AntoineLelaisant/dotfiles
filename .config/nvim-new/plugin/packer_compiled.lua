@@ -108,11 +108,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/antoine/.local/share/nvim/site/pack/packer/start/lush.nvim"
   },
-  neogit = {
-    config = { "\27LJ\1\0025\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\26plugins.config.neogit\frequire\0" },
-    loaded = true,
-    path = "/home/antoine/.local/share/nvim/site/pack/packer/start/neogit"
-  },
   ["nerd-galaxyline"] = {
     loaded = true,
     path = "/home/antoine/.local/share/nvim/site/pack/packer/start/nerd-galaxyline"
@@ -231,14 +226,14 @@ time([[Config for lspkind-nvim]], false)
 time([[Config for nvim-treesitter]], true)
 try_loadstring("\27LJ\1\2>\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0#plugins.config.nvim-treesitter\frequire\0", "config", "nvim-treesitter")
 time([[Config for nvim-treesitter]], false)
--- Config for: neogit
-time([[Config for neogit]], true)
-try_loadstring("\27LJ\1\0025\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\26plugins.config.neogit\frequire\0", "config", "neogit")
-time([[Config for neogit]], false)
 -- Config for: nvim-colorizer.lua
 time([[Config for nvim-colorizer.lua]], true)
 try_loadstring('\27LJ\1\2=\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0"plugins.config.nvim-colorizer\frequire\0', "config", "nvim-colorizer.lua")
 time([[Config for nvim-colorizer.lua]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+try_loadstring("\27LJ\1\0028\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\29plugins.config.telescope\frequire\0", "config", "telescope.nvim")
+time([[Config for telescope.nvim]], false)
 -- Config for: nvim-bufferline.lua
 time([[Config for nvim-bufferline.lua]], true)
 try_loadstring("\27LJ\1\2>\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0#plugins.config.nvim-bufferline\frequire\0", "config", "nvim-bufferline.lua")
@@ -247,10 +242,6 @@ time([[Config for nvim-bufferline.lua]], false)
 time([[Config for nvim-tree.lua]], true)
 try_loadstring("\27LJ\1\0028\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\29plugins.config.nvim-tree\frequire\0", "config", "nvim-tree.lua")
 time([[Config for nvim-tree.lua]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-try_loadstring("\27LJ\1\0028\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\29plugins.config.telescope\frequire\0", "config", "telescope.nvim")
-time([[Config for telescope.nvim]], false)
 -- Config for: nvim-lspinstall
 time([[Config for nvim-lspinstall]], true)
 try_loadstring("\27LJ\1\0029\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\30plugins.config.lspinstall\frequire\0", "config", "nvim-lspinstall")

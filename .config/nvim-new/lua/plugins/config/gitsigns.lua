@@ -6,7 +6,7 @@ require('gitsigns').setup{
     topdelete    = {hl = 'GitSignsDelete', text = '‾', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn'},
     changedelete = {hl = 'GitSignsChange', text = '~', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn'},
   },
-  current_line_blame = true,
+  current_line_blame = false,
   current_line_blame_delay = 100,
 }
 

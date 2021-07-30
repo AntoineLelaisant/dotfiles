@@ -24,6 +24,9 @@ require'telescope'.setup {
     buffer_previewer_maker = new_maker,
     prompt_prefix = "🔎 "
   },
+  find_files = {
+    theme = "dropdown",
+  },
   extensions = {
     media_files = {
       filetypes = {"png", "webp", "jpg", "jpeg"},

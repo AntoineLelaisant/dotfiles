@@ -29,11 +29,6 @@ return require('packer').startup(function()
   } -- native LSP pimped
   use 'kyazdani42/nvim-web-devicons'
   use {
-    'TimUntersberger/neogit',
-    requires = 'nvim-lua/plenary.nvim',
-    config = function() require'plugins.config.neogit' end
-  }
-  use {
     'kyazdani42/nvim-tree.lua',
     config = function() require'plugins.config.nvim-tree' end
   } -- File browser
