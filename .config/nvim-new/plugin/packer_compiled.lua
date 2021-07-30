@@ -117,6 +117,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/antoine/.local/share/nvim/site/pack/packer/start/nerd-galaxyline"
   },
+  nerdtree = {
+    config = { "\27LJ\1\0027\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\28plugins.config.nerdtree\frequire\0" },
+    loaded = true,
+    path = "/home/antoine/.local/share/nvim/site/pack/packer/start/nerdtree"
+  },
   ["nvim-bufferline.lua"] = {
     config = { "\27LJ\1\2>\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0#plugins.config.nvim-bufferline\frequire\0" },
     loaded = true,
@@ -149,11 +154,6 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/home/antoine/.local/share/nvim/site/pack/packer/opt/nvim-spectre"
   },
-  ["nvim-tree.lua"] = {
-    config = { "\27LJ\1\0028\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\29plugins.config.nvim-tree\frequire\0" },
-    loaded = true,
-    path = "/home/antoine/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
-  },
   ["nvim-treesitter"] = {
     config = { "\27LJ\1\2>\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0#plugins.config.nvim-treesitter\frequire\0" },
     loaded = true,
@@ -166,6 +166,10 @@ _G.packer_plugins = {
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/antoine/.local/share/nvim/site/pack/packer/start/packer.nvim"
+  },
+  phpactor = {
+    loaded = true,
+    path = "/home/antoine/.local/share/nvim/site/pack/packer/start/phpactor"
   },
   ["plenary.nvim"] = {
     loaded = true,
@@ -199,6 +203,18 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/home/antoine/.local/share/nvim/site/pack/packer/opt/trouble.nvim"
   },
+  ultisnips = {
+    loaded = true,
+    path = "/home/antoine/.local/share/nvim/site/pack/packer/start/ultisnips"
+  },
+  ["vim-bufonly"] = {
+    loaded = true,
+    path = "/home/antoine/.local/share/nvim/site/pack/packer/start/vim-bufonly"
+  },
+  ["vim-nerdtree-syntax-highlight"] = {
+    loaded = true,
+    path = "/home/antoine/.local/share/nvim/site/pack/packer/start/vim-nerdtree-syntax-highlight"
+  },
   ["vim-vsnip"] = {
     loaded = false,
     needs_bufread = false,
@@ -207,14 +223,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: lspkind-nvim
-time([[Config for lspkind-nvim]], true)
-try_loadstring("\27LJ\1\0026\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\27plugins.config.lspkind\frequire\0", "config", "lspkind-nvim")
-time([[Config for lspkind-nvim]], false)
--- Config for: telescope.nvim
-time([[Config for telescope.nvim]], true)
-try_loadstring("\27LJ\1\0028\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\29plugins.config.telescope\frequire\0", "config", "telescope.nvim")
-time([[Config for telescope.nvim]], false)
+-- Config for: nerdtree
+time([[Config for nerdtree]], true)
+try_loadstring("\27LJ\1\0027\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\28plugins.config.nerdtree\frequire\0", "config", "nerdtree")
+time([[Config for nerdtree]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+try_loadstring("\27LJ\1\2>\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0#plugins.config.nvim-treesitter\frequire\0", "config", "nvim-treesitter")
+time([[Config for nvim-treesitter]], false)
 -- Config for: neogit
 time([[Config for neogit]], true)
 try_loadstring("\27LJ\1\0025\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\26plugins.config.neogit\frequire\0", "config", "neogit")
@@ -223,18 +239,18 @@ time([[Config for neogit]], false)
 time([[Config for nvim-colorizer.lua]], true)
 try_loadstring('\27LJ\1\2=\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0"plugins.config.nvim-colorizer\frequire\0', "config", "nvim-colorizer.lua")
 time([[Config for nvim-colorizer.lua]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-try_loadstring("\27LJ\1\0028\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\29plugins.config.nvim-tree\frequire\0", "config", "nvim-tree.lua")
-time([[Config for nvim-tree.lua]], false)
 -- Config for: nvim-bufferline.lua
 time([[Config for nvim-bufferline.lua]], true)
 try_loadstring("\27LJ\1\2>\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0#plugins.config.nvim-bufferline\frequire\0", "config", "nvim-bufferline.lua")
 time([[Config for nvim-bufferline.lua]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-try_loadstring("\27LJ\1\2>\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0#plugins.config.nvim-treesitter\frequire\0", "config", "nvim-treesitter")
-time([[Config for nvim-treesitter]], false)
+-- Config for: lspkind-nvim
+time([[Config for lspkind-nvim]], true)
+try_loadstring("\27LJ\1\0026\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\27plugins.config.lspkind\frequire\0", "config", "lspkind-nvim")
+time([[Config for lspkind-nvim]], false)
+-- Config for: telescope.nvim
+time([[Config for telescope.nvim]], true)
+try_loadstring("\27LJ\1\0028\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\29plugins.config.telescope\frequire\0", "config", "telescope.nvim")
+time([[Config for telescope.nvim]], false)
 -- Config for: nvim-lspinstall
 time([[Config for nvim-lspinstall]], true)
 try_loadstring("\27LJ\1\0029\0\0\2\0\2\0\0044\0\0\0%\1\1\0>\0\2\1G\0\1\0\30plugins.config.lspinstall\frequire\0", "config", "nvim-lspinstall")
@@ -250,7 +266,7 @@ vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
 vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'vim-vsnip', 'friendly-snippets', 'nvim-compe'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au BufRead * ++once lua require("packer.load")({'lspsaga.nvim', 'lsp-colors.nvim', 'gitsigns.nvim', 'nvim-spectre'}, { event = "BufRead *" }, _G.packer_plugins)]]
+vim.cmd [[au BufRead * ++once lua require("packer.load")({'nvim-spectre', 'lsp-colors.nvim', 'lspsaga.nvim', 'gitsigns.nvim'}, { event = "BufRead *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end
