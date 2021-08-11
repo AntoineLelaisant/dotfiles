@@ -6,6 +6,7 @@ vim.api.nvim_set_keymap('n', '<Leader>/', ':noh<CR>', { noremap = true, silent =
 vim.api.nvim_set_keymap('n', '<C-l>', ':bn<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-h>', ':bp<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-k>', ':BD<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>bc', ':BufOnly<CR>', { noremap = true, silent = true })
 
 -- Nvim tree
 vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
@@ -51,6 +52,9 @@ vim.api.nvim_set_keymap('i', '<CR>', [[compe#confirm('<CR>')]],
                         {silent = true, expr = true})
 
 -- Phpactor
-vim.api.nvim_set_keymap('n', '<Leader><Space>', ':phpactor#ContextMenu()<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>g', ':phpactor#GotoDefinition()<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Leader>t', ':phpactor#Transform()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader><Space>', ':PhpactorContextMenu<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>g', ':PhpactorGotoDefinition e<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>t', ':PhpactorTransform<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>e', ':PhpactorClassExpand<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>n', ':PhpactorNavigate<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'cl', ':PhpactorClassNew<CR>', { noremap = true, silent = true })

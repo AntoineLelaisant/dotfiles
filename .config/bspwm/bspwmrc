@@ -44,12 +44,7 @@ bspc config initial_polarity second_child
 bspc config normal_frame_opacity 0.15
 bspc config focused_frame_opacity 0.15
 
-# bspc rule -r *:*
-#bspc rule -a "*" split_dir=DIR
-#bspc rule -a \* node=focused split_dir=east
-
-#bspc rule -a 'Firefox Developer Edition':Navigator state=floating follow=on focus=on
-#bspc rule -a 'Firefox Developer Edition':Dialog state=floating
+bspc rule -a meld state=floating
 
 xsetroot -cursor_name left_ptr
 

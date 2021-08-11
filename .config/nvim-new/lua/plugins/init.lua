@@ -67,6 +67,19 @@ return require('packer').startup(function()
     config = function() require'plugins.config.telescope' end
   } -- Fuzzy browser
   use 'nvim-telescope/telescope-fzf-writer.nvim' -- Unlock Telescope hyperspeed
+  --[[ 
+  use {
+    'junegunn/fzf',
+    run = './install --all',
+    config = function() require'plugins.config.fzf' end
+  }
+  use 'junegunn/fzf.vim'
+  ]]
+  use {
+    'phpactor/phpactor',
+    ft = {'php'},
+    run = 'composer install'
+  }
   use {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
@@ -88,10 +101,6 @@ return require('packer').startup(function()
   } -- Search and replace
   use 'schickling/vim-bufonly'
   use 'qpkorr/vim-bufkill'
-  use {
-    'phpactor/phpactor',
-    run = 'composer install'
-  }
   use 'SirVer/ultisnips'
 end)
 

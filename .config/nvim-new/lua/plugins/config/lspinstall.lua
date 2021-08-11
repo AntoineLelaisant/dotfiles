@@ -30,3 +30,5 @@ for _, server in pairs(required_servers) do
     require'lspinstall'.install_server(server)
   end
 end
+
+require 'lspconfig'.phpactor.setup{}

@@ -23,6 +23,15 @@ require'telescope'.setup {
   defaults = {
     buffer_previewer_maker = new_maker,
     prompt_prefix = "🔎 ",
+    vimgrep_arguments = {
+      'rg',
+      '--color=never',
+      '--no-heading',
+      '--with-filename',
+      '--hidden',
+      '--column',
+      '--smart-case'
+    },
   },
   pickers = {
     find_files = {
@@ -32,8 +41,8 @@ require'telescope'.setup {
         "--ignore",
         "--hidden",
         "--files"
-      }
-    },
+      },
+    }
   },
   extensions = {
     media_files = {
