@@ -12,44 +12,48 @@ vim.api.nvim_command('autocmd BufWritePost plugins.lua PackerCompile') -- Auto c
 
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim' -- Package manager
+
+  -- LSP ------------------------------------------------------
   use {
     'kabouzeid/nvim-lspinstall',
     config = function() require'plugins.config.lspinstall' end,
     requires = {'neovim/nvim-lspconfig'}
   }
   use {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate',
-    config = function() require'plugins.config.nvim-treesitter' end
-  }
-  use {
     'glepnir/lspsaga.nvim',
     config = function() require'plugins.config.lspsaga' end,
     event = 'BufRead'
-  } -- native LSP pimped
-  use 'kyazdani42/nvim-web-devicons'
-  use {
-    'kyazdani42/nvim-tree.lua',
-    config = function() require'plugins.config.nvim-tree' end
-  } -- File browser
-  use {
-    'hrsh7th/nvim-compe',
-    config = function() require'plugins.config.nvim-compe' end,
-    event = 'InsertEnter'
-  } -- Completion
-  use {'hrsh7th/vim-vsnip', event = 'InsertEnter'} -- VSCode LSP Snippet
-  use {"rafamadriz/friendly-snippets", event = "InsertEnter"} -- Preconfigured snippets
+  }
   use {
     'onsails/lspkind-nvim',
     config = function() require'plugins.config.lspkind' end
   }
   use {'folke/lsp-colors.nvim', event = 'BufRead'} -- Add missing colors to LSP
   use {
-    'norcalli/nvim-colorizer.lua',
-    config = function() require'plugins.config.nvim-colorizer' end,
-  } -- Colors highlight
-  use {'michaelb/sniprun', run = 'bash ./install.sh'} -- Code runner
-  use {'jared-mackey/gruvbox.nvim', requires = {'rktjmp/lush.nvim'}} -- Color theme
+    'phpactor/phpactor',
+    ft = {'php'},
+    run = 'composer install'
+  }
+
+  -- Autocomplete & Syntax ------------------------------------
+  use {
+    'hrsh7th/nvim-compe',
+    config = function() require'plugins.config.nvim-compe' end,
+    event = 'InsertEnter'
+  } -- Completion
+
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+    config = function() require'plugins.config.nvim-treesitter' end
+  }
+
+  -- File browser & Interface ---------------------------------
+  use 'kyazdani42/nvim-web-devicons'
+  use {
+    'kyazdani42/nvim-tree.lua',
+    config = function() require'plugins.config.nvim-tree' end
+  } -- File browser
   use {
     'akinsho/nvim-bufferline.lua',
     requires = 'kyazdani42/nvim-web-devicons',
@@ -61,6 +65,14 @@ return require('packer').startup(function()
      requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
   use 'Avimitin/nerd-galaxyline'
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    },
+    config = function() require'plugins.config.gitsigns' end,
+    event = "BufRead"
+  }
   use {
     'nvim-telescope/telescope.nvim',
     requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}, {'nvim-telescope/telescope-media-files.nvim'}},
@@ -76,10 +88,17 @@ return require('packer').startup(function()
   use 'junegunn/fzf.vim'
   ]]
   use {
-    'phpactor/phpactor',
-    ft = {'php'},
-    run = 'composer install'
-  }
+    'norcalli/nvim-colorizer.lua',
+    config = function() require'plugins.config.nvim-colorizer' end,
+  } -- Colors highlight
+  use {'jared-mackey/gruvbox.nvim', requires = {'rktjmp/lush.nvim'}} -- Color theme
+
+  -- Snippets -------------------------------------------------
+  use {'hrsh7th/vim-vsnip', event = 'InsertEnter'} -- VSCode LSP Snippet
+  use {"rafamadriz/friendly-snippets", event = "InsertEnter"} -- Preconfigured snippets
+  use 'SirVer/ultisnips'
+
+  -- Debug ----------------------------------------------------
   use {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
@@ -87,20 +106,17 @@ return require('packer').startup(function()
     config = function() require'plugins.config.trouble' end
   }
   use {
-    'lewis6991/gitsigns.nvim',
-    requires = {
-      'nvim-lua/plenary.nvim'
-    },
-    config = function() require'plugins.config.gitsigns' end,
-    event = "BufRead"
-  }
-  use {
     'windwp/nvim-spectre',
     config = function() require'plugins.config.spectre' end,
     event = "BufRead",
   } -- Search and replace
+  use {
+    'b3nj5m1n/kommentary',
+    config = function() require'plugins.config.kommentary' end,
+  }
+
+  -- Utils ---------------------------------------------------
   use 'schickling/vim-bufonly'
   use 'qpkorr/vim-bufkill'
-  use 'SirVer/ultisnips'
 end)
 
