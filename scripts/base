@@ -12,6 +12,8 @@ yay -S --needed --noconfirm \
     ripgrep \
     xclip \
     diff-so-fancy \
+    netctl \
+    dialog \
     keychain \
     neofetch
 
