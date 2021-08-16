@@ -96,6 +96,7 @@ return require('packer').startup(function()
   -- Snippets -------------------------------------------------
   use {'hrsh7th/vim-vsnip', event = 'InsertEnter'} -- VSCode LSP Snippet
   use {"rafamadriz/friendly-snippets", event = "InsertEnter"} -- Preconfigured snippets
+  use {'windwp/nvim-autopairs', config = function() require'plugins.config.nvim-autopairs' end}
   use 'SirVer/ultisnips'
 
   -- Debug ----------------------------------------------------
