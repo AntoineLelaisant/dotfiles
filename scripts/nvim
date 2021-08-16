@@ -8,5 +8,3 @@ pip2 install --user neovim
 yarn global add neovim
 
 ln -sf $(git rev-parse --show-toplevel)/.config/nvim $HOME/.config
-
-nvim +'PlugInstall --sync' +qa
