@@ -10,7 +10,6 @@ vim.api.nvim_set_keymap('n', '<Leader>bc', ':BufOnly<CR>', { noremap = true, sil
 
 -- Nvim tree
 vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-r>', ':NvimTreeRefresh<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>f', ':NvimTreeFindFile<CR>', { noremap = true, silent = true })
 
 -- LSP Saga
