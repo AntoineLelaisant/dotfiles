@@ -48,6 +48,8 @@ return require('packer').startup(function()
     config = function() require'plugins.config.nvim-treesitter' end
   }
 
+  use 'sheerun/vim-polyglot' 
+
   -- File browser & Interface ---------------------------------
   use 'kyazdani42/nvim-web-devicons'
   use {
@@ -79,7 +81,7 @@ return require('packer').startup(function()
     config = function() require'plugins.config.telescope' end
   } -- Fuzzy browser
   use 'nvim-telescope/telescope-fzf-writer.nvim' -- Unlock Telescope hyperspeed
-  --[[ 
+  --[[
   use {
     'junegunn/fzf',
     run = './install --all',
