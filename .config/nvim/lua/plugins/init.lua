@@ -75,20 +75,16 @@ return require('packer').startup(function()
     config = function() require'plugins.config.gitsigns' end,
     event = "BufRead"
   }
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}, {'nvim-telescope/telescope-media-files.nvim'}},
-    config = function() require'plugins.config.telescope' end
-  } -- Fuzzy browser
-  use 'nvim-telescope/telescope-fzf-writer.nvim' -- Unlock Telescope hyperspeed
-  --[[
-  use {
-    'junegunn/fzf',
-    run = './install --all',
+
+  use { 'junegunn/fzf', run = './install --all' }
+  use { 'ibhagwan/fzf-lua',
+    requires = {
+      'vijaymarupudi/nvim-fzf',
+      'kyazdani42/nvim-web-devicons',
+    },
     config = function() require'plugins.config.fzf' end
   }
-  use 'junegunn/fzf.vim'
-  ]]
+
   use {
     'norcalli/nvim-colorizer.lua',
     config = function() require'plugins.config.nvim-colorizer' end,
@@ -111,6 +107,7 @@ return require('packer').startup(function()
   use {
     'windwp/nvim-spectre',
     config = function() require'plugins.config.spectre' end,
+    requires = {{'nvim-lua/popup.nvim'}},
     event = "BufRead",
   } -- Search and replace
   use {
