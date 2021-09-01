@@ -10,7 +10,7 @@ end
 
 vim.api.nvim_command('autocmd BufWritePost plugins.lua PackerCompile') -- Auto compile when saving plugins.lua
 
-return require('packer').startup(function()
+return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim' -- Package manager
 
   -- LSP ------------------------------------------------------
@@ -92,10 +92,15 @@ return require('packer').startup(function()
   use {'jared-mackey/gruvbox.nvim', requires = {'rktjmp/lush.nvim'}} -- Color theme
 
   -- Snippets -------------------------------------------------
-  use {'hrsh7th/vim-vsnip', event = 'InsertEnter'} -- VSCode LSP Snippet
+  use {
+    'hrsh7th/vim-vsnip',
+    event = 'InsertEnter',
+    config = function () require'plugins.config.vsnip' end
+  } -- VSCode LSP Snippet
+
   use {"rafamadriz/friendly-snippets", event = "InsertEnter"} -- Preconfigured snippets
+
   use {'windwp/nvim-autopairs', config = function() require'plugins.config.nvim-autopairs' end}
-  use 'SirVer/ultisnips'
 
   -- Debug ----------------------------------------------------
   use {

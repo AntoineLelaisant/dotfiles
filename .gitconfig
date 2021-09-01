@@ -7,7 +7,7 @@
 [user]
     name = Antoine Lelaisant
     email = antoine.lelaisant@knplabs.com
-	signingkey = B64518572B6E848ABBAD4FF486D0F44143443F01
+    signingkey = B64518572B6E848ABBAD4FF486D0F44143443F01
 [alias]
     ci = commit
     co = checkout
