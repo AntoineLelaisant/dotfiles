@@ -19,6 +19,7 @@ yay -S --needed --noconfirm \
     redshift \
     playerctl \
     thunar \
+    tumbler \
     meld \
     xss-lock \
     i3lock-color \
