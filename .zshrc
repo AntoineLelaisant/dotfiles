@@ -77,7 +77,9 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH=${PATH}:${HOME}/.yarn/bin
 export PATH=${PATH}:${JAVA_HOME}/bin:$PATH
 export PATH=${PATH}:${HOME}/lib/flutter/bin
+export PATH="$PATH:/usr/bin/dart"
 export PATH="$HOME/.symfony/bin:$PATH"
+export PATH="$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH"
 
 export FZF_DEFAULT_COMMAND='fd --hidden --type f --follow --color=always --exclude .git'
 export FZF_DEFAULT_OPTS="--ansi"
@@ -86,6 +88,8 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export _JAVA_OPTIONS=-Djava.io.tmpdir=/var/tmp
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+export CHROME_EXECUTABLE=/usr/bin/google-chrome-stable
 
 # Fixes keys
 bindkey -e
@@ -160,7 +164,6 @@ _fzf_compgen_path() {
 _fzf_compgen_dir() {
   fd --type d --hidden --follow --exclude ".git" . "$1"
 }
-
 
 # pierpo/fzf-docker
 # doesn't work with zplug...

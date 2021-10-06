@@ -48,7 +48,7 @@ return require('packer').startup(function(use)
     config = function() require'plugins.config.nvim-treesitter' end
   }
 
-  use 'sheerun/vim-polyglot' 
+  use 'sheerun/vim-polyglot'
 
   -- File browser & Interface ---------------------------------
   use 'kyazdani42/nvim-web-devicons'
@@ -124,4 +124,3 @@ return require('packer').startup(function(use)
   use 'schickling/vim-bufonly'
   use 'qpkorr/vim-bufkill'
 end)
-

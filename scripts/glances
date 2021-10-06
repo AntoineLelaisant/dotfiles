@@ -1,0 +1,5 @@
+#!/bin/sh
+
+pip install defusedxml bottle
+
+yay -S --needed --noconfirm glances
