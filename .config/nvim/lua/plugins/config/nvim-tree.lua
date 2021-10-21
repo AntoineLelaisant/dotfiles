@@ -12,7 +12,9 @@ vim.g.nvim_tree_show_icons = {
 require'nvim-tree'.setup {
   auto_close = false,
   disable_netrw = true,
-  lsp_diagnostics = true,
+  diagnostics = {
+    enable = true,
+  },
   update_focused_file = {
     update_cwd = true,
   },
