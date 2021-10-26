@@ -1,1 +1,1 @@
-vim.o.tabstop = 4
+vim.bo.tabstop = 4
