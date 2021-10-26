@@ -21,4 +21,4 @@ node_modules
 cache
 logs
 .phpactor.json
-.config/nvim-new/plugin/packer_compiled.lua
+.config/nvim/plugin/packer_compiled.lua
