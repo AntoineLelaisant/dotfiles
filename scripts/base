@@ -15,6 +15,7 @@ yay -S --needed --noconfirm \
     netctl \
     dialog \
     keychain \
+    aria2 \
     neofetch
 
 mkdir -p /home/$(whoami)/.config
