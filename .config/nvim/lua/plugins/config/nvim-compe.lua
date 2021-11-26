@@ -1,6 +1,6 @@
 require'compe'.setup {
   enabled = true;
-   autocomplete = true;
+  autocomplete = true;
   debug = false;
   map_cr = true, --  map <CR> on insert mode
   map_complete = true;
