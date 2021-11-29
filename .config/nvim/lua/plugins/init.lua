@@ -15,8 +15,8 @@ return require('packer').startup(function(use)
 
   -- LSP ------------------------------------------------------
   use {
-    'kabouzeid/nvim-lspinstall',
-    config = function() require'plugins.config.lspinstall' end,
+    'williamboman/nvim-lsp-installer',
+    config = function() require'plugins.config.lsp-installer' end,
     requires = {'neovim/nvim-lspconfig'}
   }
   use {
@@ -37,9 +37,18 @@ return require('packer').startup(function(use)
 
   -- Autocomplete & Syntax ------------------------------------
   use {
-    'hrsh7th/nvim-compe',
-    config = function() require'plugins.config.nvim-compe' end,
-    event = 'InsertEnter'
+    'hrsh7th/nvim-cmp',
+    config = function() require'plugins.config.nvim-cmp' end,
+    event = 'InsertEnter',
+    requires = {
+      { 'hrsh7th/cmp-buffer', module = "cmp_buffer" },
+      { 'hrsh7th/cmp-nvim-lua', module = "cmp_nvim_lua" },
+      { 'hrsh7th/cmp-nvim-lsp', module = "cmp_nvim_lsp" },
+      { 'hrsh7th/cmp-path', module = "cmp_path" },
+      { "hrsh7th/cmp-calc", module = "cmp_calc" },
+      { "hrsh7th/cmp-emoji", module = "cmp_emoji" },
+      { 'hrsh7th/cmp-vsnip', module = "cmp_vsnip" }
+    }
   } -- Completion
 
   use {

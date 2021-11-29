@@ -1,5 +1,3 @@
-vim.g.nvim_tree_ignore = {'.git', 'node_modules'}
-vim.g.nvim_tree_gitignore = 1
 vim.g.nvim_tree_show_icons = {
   git = 0,
   folders = 1,
@@ -12,6 +10,7 @@ vim.g.nvim_tree_show_icons = {
 require'nvim-tree'.setup {
   auto_close = false,
   disable_netrw = true,
+  ignore_ft_on_setup  = {'.git', 'node_modules'},
   diagnostics = {
     enable = true,
   },
@@ -20,5 +19,8 @@ require'nvim-tree'.setup {
   },
   update_to_buf_dir = {
     auto_open = false,
+  },
+  git = {
+    ignore = true
   }
 }

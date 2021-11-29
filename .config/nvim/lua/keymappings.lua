@@ -45,13 +45,6 @@ vim.api.nvim_set_keymap('n', '<Leader>S', [[<Cmd>lua require('spectre').open()<C
 vim.api.nvim_set_keymap('n', '<Leader>s', [[<Cmd>lua require('spectre').open_visual()<CR>]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>sp', [[<Cmd>lua require('spectre').open_file_search()<CR>]], { noremap = true, silent = true })
 
--- nvim-compe
-vim.api.nvim_set_keymap('i', '<Tab>', 'v:lua.tab_complete()', {expr = true})
-vim.api.nvim_set_keymap('s', '<Tab>', 'v:lua.tab_complete()', {expr = true})
-vim.api.nvim_set_keymap('i', '<S-Tab>', 'v:lua.s_tab_complete()', {expr = true})
-vim.api.nvim_set_keymap('s', '<S-Tab>', 'v:lua.s_tab_complete()', {expr = true})
-vim.api.nvim_set_keymap('i', '<CR>', [[compe#confirm('<CR>')]], {silent = true, expr = true})
-
 -- Phpactor
 vim.api.nvim_set_keymap('n', '<Leader><Space>', ':PhpactorContextMenu<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>g', ':PhpactorGotoDefinition e<CR>', { noremap = true, silent = true })
