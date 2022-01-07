@@ -83,3 +83,50 @@ cmp.setup {
     { name = "emoji" },
   },
 }
+
+cmp.setup.cmdline('/', {
+  sources = {
+    { name = 'buffer' }
+  }
+})
+
+cmp.setup.cmdline(':', {
+  sources = cmp.config.sources({
+      { name = 'path' }
+    }, {
+    { name = 'cmdline' }
+  })
+})
+
+function dump(o)
+   if type(o) == 'table' then
+      local s = '{ '
+      for k,v in pairs(o) do
+         if type(k) ~= 'number' then k = '"'..k..'"' end
+         s = s .. '['..k..'] = ' .. dump(v) .. ','
+      end
+      return s .. '} '
+   else
+      return tostring(o)
+   end
+end
+
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+local file = io.open('/tmp/dump-capabilities.txt', 'w')
+io.output(file)
+
+io.write(dump(capabilities))
+
+io.close(file)
+
+local lsp_servers = {
+  "intelephense",
+  "tsserver"
+}
+
+for _, server in pairs(lsp_servers) do
+  require('lspconfig')[server].setup {
+    capabilities = capabilities
+  }
+end
