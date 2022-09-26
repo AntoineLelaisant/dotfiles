@@ -68,7 +68,7 @@ fpath=(~/.zsh/completion $fpath)
 autoload -Uz compinit && compinit -i
 
 export ANDROID_HOME=${HOME}/Android/Sdk
-export JAVA_HOME="/usr/lib/jvm/java-8-openjdk/jre"
+export JAVA_HOME="/usr/lib/jvm/default"
 export _JAVA_AWT_WM_NONREPARENTING=1 # Fixes grey java apps
 export PATH=${PATH}:${HOME}/.bin
 export PATH=${PATH}:${HOME}/.local/bin
@@ -145,7 +145,7 @@ alias open-workspace='teamocil --layout ./.teamocil.yml --here'
 alias gpurge='purge = branch --merged master | grep -v master | xargs git branch -d'
 alias dcps="docker-compose ps"
 alias dce='docker-compose exec'
-alias dc='docker-compose'
+alias dc='docker compose'
 alias dcs="docker stop $(docker ps -aq)"
 alias dcp="docker rm $(docker ps -aq)"
 alias pbcopy="xclip -sel clip"
@@ -215,3 +215,7 @@ fif() {
 rp() {
   sd $1 $2 $(fif $1)
 }
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
