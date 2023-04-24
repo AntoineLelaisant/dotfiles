@@ -1,13 +1,3 @@
-! ------------------------------------------------------------------------------
-! ROFI Color theme
-! ------------------------------------------------------------------------------
-rofi.color-enabled:               true
-rofi.color-window:                argb:d92f343f, argb:0002b36, argb:0000000
-rofi.color-normal:                argb:0f3f4f5, #f3f4f5, argb:0f3f4f5, argb:0f3f4f5, #9575cd
-rofi.color-active:                argb:0f3f4f5, #9575cd, argb:0f3f4f5, argb:0f3f4f5, #f3f4f5
-rofi.color-urgent:                argb:0f3f4f5, #f3f4f5, argb:0f3f4f5, argb:0dc322f, #f3f4f5
-
-! Misc
 xft.lcdfilter:                    ldcdefault
 xft.hintstyle:                    hintslight
 

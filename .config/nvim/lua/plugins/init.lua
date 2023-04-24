@@ -62,11 +62,12 @@ return require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
     config = function() require'plugins.config.nvim-treesitter' end,
+    opt = vim.g.vscode 
   }
 
-  use {
-    'sheerun/vim-polyglot',
-  }
+  -- use {
+  --  'sheerun/vim-polyglot',
+  --} 
 
   -- File browser & Interface ---------------------------------
   use 'kyazdani42/nvim-web-devicons'
@@ -80,9 +81,9 @@ return require('packer').startup(function(use)
     config = function() require'plugins.config.nvim-bufferline' end,
   }
   use {
-    'glepnir/galaxyline.nvim',
-     branch = 'main',
-     requires = {'kyazdani42/nvim-web-devicons', opt = true},
+    'nvim-lualine/lualine.nvim',
+     config = function () require'plugins.config.lualine' end,
+     requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
   use {
     'Avimitin/nerd-galaxyline',

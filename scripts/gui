@@ -1,28 +1,22 @@
 #!/bin/sh
 
 yay -S --needed --noconfirm \
+    gnome \
     arandr \
     xorg-server \
     xf86-video-intel \
-    bspwm \
-    sxhkd \
-    rofi \
     jq \
-    polybar \
     xorg-xinit \
     xorg-xsetroot \
     picom \
     feh \
     xbindkeys \
-    dunst \
     clipit \
     redshift \
     playerctl \
     thunar \
     tumbler \
     meld \
-    xss-lock \
-    i3lock-color \
     imagemagick \
     adwaita-icon-theme \
     la-capitaine-icon-theme \
@@ -39,12 +33,7 @@ pip install dbus-python
 # looks like xorg-xrdb were not found with yay
 #sudo pacman -S --noconfirm xorg-xrdb
 
-ln -sf $(git rev-parse --show-toplevel)/.config/bspwm $HOME/.config
-ln -sf $(git rev-parse --show-toplevel)/.config/sxhkd $HOME/.config
-ln -sf $(git rev-parse --show-toplevel)/.config/rofi $HOME/.config
-ln -sf $(git rev-parse --show-toplevel)/.config/polybar $HOME/.config
 ln -sf $(git rev-parse --show-toplevel)/.config/dunst $HOME/.config
 ln -sf $(git rev-parse --show-toplevel)/.xinitrc $HOME/.xinitrc
 ln -sf $(git rev-parse --show-toplevel)/.xprofile $HOME/.xprofile
 ln -sf $(git rev-parse --show-toplevel)/.Xresources $HOME/.Xresources
-ln -sf $(git rev-parse --show-toplevel)/.xbindkeysrc $HOME/.xbindkeysrc
